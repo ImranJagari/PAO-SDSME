@@ -7863,9 +7863,9 @@ namespace WindowsFormsApplication1
                             };
                             rendererOBJ.RipModel(ef.FileName);
                         }
-                        catch
+                        catch (Exception exception)
                         {
-                            MessageBox.Show("There was a problem when exporting. Operation aborted.", null, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            MessageBox.Show("There was a problem when exporting. Operation aborted." + Environment.NewLine + " Message : " + exception.Message + Environment.NewLine + " Stacktrace : " + exception.StackTrace, null, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         }
                         return;
                     }
@@ -7911,9 +7911,9 @@ namespace WindowsFormsApplication1
                             };
                             rendererOBJ.RipModel(ef.FileName);
                         }
-                        catch
+                        catch (Exception exception)
                         {
-                            MessageBox.Show("There was a problem when exporting. Operation aborted.", null, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            MessageBox.Show("There was a problem when exporting. Operation aborted." + Environment.NewLine + " Message : " + exception.Message + Environment.NewLine + " Stacktrace : " + exception.StackTrace, null, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         }
                         return;
                     }
@@ -17197,8 +17197,9 @@ namespace WindowsFormsApplication1
                                     Scene scene = importer.ImportFile($"./maps/{mapId} - {mapName}/{mapId} - {mapName}.obj");
                                     bool success = importer.ExportFile(scene, $"./maps/{mapId} - {mapName}/{mapId} - {mapName}.3ds", "3ds");
                                 }
-                                catch (Exception)
+                                catch (Exception exception)
                                 {
+                                    MessageBox.Show("There was a problem when exporting to 3DS. Operation aborted." + Environment.NewLine + " Message : " + exception.Message + Environment.NewLine + " Stacktrace : " + exception.StackTrace, null, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                                 }
                             }
                         }

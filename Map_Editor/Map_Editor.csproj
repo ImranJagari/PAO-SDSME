@@ -74,10 +74,10 @@
     </Reference>
     <Reference Include="HelixToolkit, Version=2011.10.1.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SDMSE\HelixToolkit.dll</HintPath>
+      <HintPath>libs\HelixToolkit.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
-      <HintPath>..\..\..\SDMSE\OpenTK.dll</HintPath>
+      <HintPath>libs\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -93,12 +93,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="Tao.OpenGl, Version=2.1.0.12, Culture=neutral, PublicKeyToken=1ca010269a4501ef, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SDMSE\Tao.OpenGl.dll</HintPath>
+      <HintPath>libs\Tao.OpenGl.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Tao.Platform.Windows, Version=1.0.0.5, Culture=neutral, PublicKeyToken=701104b2da67a104, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SDMSE\Tao.Platform.Windows.dll</HintPath>
+      <HintPath>libs\Tao.Platform.Windows.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WindowsBase" />
