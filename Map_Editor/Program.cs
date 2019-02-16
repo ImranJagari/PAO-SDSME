@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.ApplicationExit += new EventHandler(ApplicationExit);
-            Application.Run(new Form1());
+            Application.Run(new FormMain());
         }
 
         public static void ApplicationExit(object sender, EventArgs e)

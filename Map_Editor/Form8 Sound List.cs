@@ -32,30 +32,30 @@ namespace WindowsFormsApplication1
 
         private void Form8_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form1.soundON = false;
+            FormMain.soundON = false;
         }
 
         private void Form8_Load(object sender, EventArgs e)
         {
-            if (Form1.isBW == true)
+            if (FormMain.isBW == true)
             {
-                soundPath = Form1.workingFolder + @"data\wb_sound_data.sdat";
+                soundPath = FormMain.workingFolder + @"data\wb_sound_data.sdat";
             }
-            else if (Form1.isB2W2 == true)
+            else if (FormMain.isB2W2 == true)
             {
-                soundPath = Form1.workingFolder + @"data\swan_sound_data.sdat";
+                soundPath = FormMain.workingFolder + @"data\swan_sound_data.sdat";
             }
-            else if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            else if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
-                soundPath = Form1.workingFolder + @"data\data\sound\sound_data.sdat";
+                soundPath = FormMain.workingFolder + @"data\data\sound\sound_data.sdat";
             }
-            else if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            else if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
-                soundPath = Form1.workingFolder + @"data\data\sound\pl_sound_data.sdat";
+                soundPath = FormMain.workingFolder + @"data\data\sound\pl_sound_data.sdat";
             }
             else
             {
-                soundPath = Form1.workingFolder + @"data\data\sound\gs_sound_data.sdat";
+                soundPath = FormMain.workingFolder + @"data\data\sound\gs_sound_data.sdat";
             }
             BinaryReader readSound = new BinaryReader(File.OpenRead(soundPath));
             readSound.BaseStream.Position = 0x18;

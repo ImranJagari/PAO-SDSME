@@ -49,17 +49,17 @@ namespace WindowsFormsApplication1
         {
             Form2 bldEditor = new Form2();
             bldEditor.Show(this);
-            if (Form1.isBW)
+            if (FormMain.isBW)
             {
-                Narc.Open(Form1.workingFolder + @"data\a\2\2\9").ExtractToFolder(Form1.workingFolder + @"data\a\2\2\exBld");
-                Narc.Open(Form1.workingFolder + @"data\a\2\3\0").ExtractToFolder(Form1.workingFolder + @"data\a\2\3\inBld");
+                Narc.Open(FormMain.workingFolder + @"data\a\2\2\9").ExtractToFolder(FormMain.workingFolder + @"data\a\2\2\exBld");
+                Narc.Open(FormMain.workingFolder + @"data\a\2\3\0").ExtractToFolder(FormMain.workingFolder + @"data\a\2\3\inBld");
             }
             else
             {
-                Narc.Open(Form1.workingFolder + @"data\a\2\2\5").ExtractToFolder(Form1.workingFolder + @"data\a\2\2\exBld");
-                Narc.Open(Form1.workingFolder + @"data\a\2\2\6").ExtractToFolder(Form1.workingFolder + @"data\a\2\2\inBld");
+                Narc.Open(FormMain.workingFolder + @"data\a\2\2\5").ExtractToFolder(FormMain.workingFolder + @"data\a\2\2\exBld");
+                Narc.Open(FormMain.workingFolder + @"data\a\2\2\6").ExtractToFolder(FormMain.workingFolder + @"data\a\2\2\inBld");
             }
-            bldPath = Form1.workingFolder + @"data\a\2\2\exBld";
+            bldPath = FormMain.workingFolder + @"data\a\2\2\exBld";
             for (int i = 0; i < Directory.GetFiles(bldPath).Length; i++)
             {
                 comboBox1.Items.Add(rm.GetString("buildingPackList") + i);
@@ -102,11 +102,11 @@ namespace WindowsFormsApplication1
             _nsbmd = NsbmdLoader.LoadNsbmd(fileStream);
             if (!checkBox1.Checked)
             {
-                _nsbmd.materials = LibNDSFormats.NSBTX.NsbtxLoader.LoadNsbtx(new MemoryStream(File.ReadAllBytes(Form1.workingFolder + @"data\a\1\7\bldtilesets" + "\\" + comboBox1.SelectedIndex.ToString("D4"))), out _nsbmd.Textures, out _nsbmd.Palettes);
+                _nsbmd.materials = LibNDSFormats.NSBTX.NsbtxLoader.LoadNsbtx(new MemoryStream(File.ReadAllBytes(FormMain.workingFolder + @"data\a\1\7\bldtilesets" + "\\" + comboBox1.SelectedIndex.ToString("D4"))), out _nsbmd.Textures, out _nsbmd.Palettes);
             }
             else
             {
-                _nsbmd.materials = LibNDSFormats.NSBTX.NsbtxLoader.LoadNsbtx(new MemoryStream(File.ReadAllBytes(Form1.workingFolder + @"data\a\1\7\bld2tilesets" + "\\" + comboBox1.SelectedIndex.ToString("D4"))), out _nsbmd.Textures, out _nsbmd.Palettes);
+                _nsbmd.materials = LibNDSFormats.NSBTX.NsbtxLoader.LoadNsbtx(new MemoryStream(File.ReadAllBytes(FormMain.workingFolder + @"data\a\1\7\bld2tilesets" + "\\" + comboBox1.SelectedIndex.ToString("D4"))), out _nsbmd.Textures, out _nsbmd.Palettes);
             }
             try
             {
@@ -129,17 +129,17 @@ namespace WindowsFormsApplication1
         {
             if (!checkBox1.Checked)
             {
-                AB.Pack(Form1.workingFolder + @"data\a\2\2\exBld", Form1.workingFolder + @"data\a\2\2\exBld" + "\\" + comboBox1.SelectedIndex.ToString("D4"));
+                AB.Pack(FormMain.workingFolder + @"data\a\2\2\exBld", FormMain.workingFolder + @"data\a\2\2\exBld" + "\\" + comboBox1.SelectedIndex.ToString("D4"));
             }
             else
             {
-                if (Form1.isBW)
+                if (FormMain.isBW)
                 {
-                    AB.Pack(Form1.workingFolder + @"data\a\2\3\inBld", Form1.workingFolder + @"data\a\2\3\inBld" + "\\" + comboBox1.SelectedIndex.ToString("D4"));
+                    AB.Pack(FormMain.workingFolder + @"data\a\2\3\inBld", FormMain.workingFolder + @"data\a\2\3\inBld" + "\\" + comboBox1.SelectedIndex.ToString("D4"));
                 }
                 else
                 {
-                    AB.Pack(Form1.workingFolder + @"data\a\2\2\inBld", Form1.workingFolder + @"data\a\2\2\inBld" + "\\" + comboBox1.SelectedIndex.ToString("D4"));
+                    AB.Pack(FormMain.workingFolder + @"data\a\2\2\inBld", FormMain.workingFolder + @"data\a\2\2\inBld" + "\\" + comboBox1.SelectedIndex.ToString("D4"));
                 }
             }
         }
@@ -165,18 +165,18 @@ namespace WindowsFormsApplication1
             comboBox1.Items.Clear();
             if (checkBox1.Checked)
             {
-                if (Form1.isBW)
+                if (FormMain.isBW)
                 {
-                    bldPath = Form1.workingFolder + @"data\a\2\3\inBld";
+                    bldPath = FormMain.workingFolder + @"data\a\2\3\inBld";
                 }
                 else
                 {
-                    bldPath = Form1.workingFolder + @"data\a\2\2\inBld";
+                    bldPath = FormMain.workingFolder + @"data\a\2\2\inBld";
                 }
             }
             else
             {
-                bldPath = Form1.workingFolder + @"data\a\2\2\exBld";
+                bldPath = FormMain.workingFolder + @"data\a\2\2\exBld";
             }
             for (int i = 0; i < Directory.GetFiles(bldPath).Length; i++)
             {
@@ -227,11 +227,11 @@ namespace WindowsFormsApplication1
                 string tex;
                 if (!checkBox1.Checked)
                 {
-                    tex= Form1.workingFolder + @"data\a\1\7\bldtilesets" + "\\" + comboBox1.SelectedIndex.ToString("D4");
+                    tex= FormMain.workingFolder + @"data\a\1\7\bldtilesets" + "\\" + comboBox1.SelectedIndex.ToString("D4");
                 }
                 else
                 {
-                    tex = Form1.workingFolder + @"data\a\1\7\bld2tilesets" + "\\" + comboBox1.SelectedIndex.ToString("D4");
+                    tex = FormMain.workingFolder + @"data\a\1\7\bld2tilesets" + "\\" + comboBox1.SelectedIndex.ToString("D4");
                 }
                 System.IO.BinaryReader readTex = new System.IO.BinaryReader(File.OpenRead(tex));
                 long texLength = readTex.BaseStream.Length - 0x14;
@@ -306,33 +306,33 @@ namespace WindowsFormsApplication1
         public void CloseForm()
         {
             this.Close();
-            if (Form1.isBW)
+            if (FormMain.isBW)
             {
-                if (Directory.Exists(Form1.workingFolder + @"data\a\2\3\inBld\header"))
+                if (Directory.Exists(FormMain.workingFolder + @"data\a\2\3\inBld\header"))
                 {
-                    Directory.Delete(Form1.workingFolder + @"data\a\2\3\inBld\header", true);
-                    Directory.Delete(Form1.workingFolder + @"data\a\2\3\inBld\model", true);
+                    Directory.Delete(FormMain.workingFolder + @"data\a\2\3\inBld\header", true);
+                    Directory.Delete(FormMain.workingFolder + @"data\a\2\3\inBld\model", true);
                 }
-                Directory.Delete(Form1.workingFolder + @"data\a\2\2\exBld\header", true);
-                Directory.Delete(Form1.workingFolder + @"data\a\2\2\exBld\model", true);
-                Narc.FromFolder(Form1.workingFolder + @"data\a\2\2\exBld").Save(Form1.workingFolder + @"data\a\2\2\9");
-                Narc.FromFolder(Form1.workingFolder + @"data\a\2\3\inBld").Save(Form1.workingFolder + @"data\a\2\3\0");
-                Directory.Delete(Form1.workingFolder + @"data\a\2\2\exBld", true);
-                Directory.Delete(Form1.workingFolder + @"data\a\2\3\inBld", true);
+                Directory.Delete(FormMain.workingFolder + @"data\a\2\2\exBld\header", true);
+                Directory.Delete(FormMain.workingFolder + @"data\a\2\2\exBld\model", true);
+                Narc.FromFolder(FormMain.workingFolder + @"data\a\2\2\exBld").Save(FormMain.workingFolder + @"data\a\2\2\9");
+                Narc.FromFolder(FormMain.workingFolder + @"data\a\2\3\inBld").Save(FormMain.workingFolder + @"data\a\2\3\0");
+                Directory.Delete(FormMain.workingFolder + @"data\a\2\2\exBld", true);
+                Directory.Delete(FormMain.workingFolder + @"data\a\2\3\inBld", true);
             }
             else
             {
-                if (Directory.Exists(Form1.workingFolder + @"data\a\2\2\inBld\header"))
+                if (Directory.Exists(FormMain.workingFolder + @"data\a\2\2\inBld\header"))
                 {
-                    Directory.Delete(Form1.workingFolder + @"data\a\2\2\inBld\header", true);
-                    Directory.Delete(Form1.workingFolder + @"data\a\2\2\inBld\model", true);
+                    Directory.Delete(FormMain.workingFolder + @"data\a\2\2\inBld\header", true);
+                    Directory.Delete(FormMain.workingFolder + @"data\a\2\2\inBld\model", true);
                 }
-                Directory.Delete(Form1.workingFolder + @"data\a\2\2\exBld\header", true);
-                Directory.Delete(Form1.workingFolder + @"data\a\2\2\exBld\model", true);
-                Narc.FromFolder(Form1.workingFolder + @"data\a\2\2\exBld").Save(Form1.workingFolder + @"data\a\2\2\5");
-                Narc.FromFolder(Form1.workingFolder + @"data\a\2\2\inBld").Save(Form1.workingFolder + @"data\a\2\2\6");
-                Directory.Delete(Form1.workingFolder + @"data\a\2\2\exBld", true);
-                Directory.Delete(Form1.workingFolder + @"data\a\2\2\inBld", true);
+                Directory.Delete(FormMain.workingFolder + @"data\a\2\2\exBld\header", true);
+                Directory.Delete(FormMain.workingFolder + @"data\a\2\2\exBld\model", true);
+                Narc.FromFolder(FormMain.workingFolder + @"data\a\2\2\exBld").Save(FormMain.workingFolder + @"data\a\2\2\5");
+                Narc.FromFolder(FormMain.workingFolder + @"data\a\2\2\inBld").Save(FormMain.workingFolder + @"data\a\2\2\6");
+                Directory.Delete(FormMain.workingFolder + @"data\a\2\2\exBld", true);
+                Directory.Delete(FormMain.workingFolder + @"data\a\2\2\inBld", true);
             }
         }
 

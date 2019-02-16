@@ -3084,7 +3084,7 @@ namespace LibNDSFormats.NSBMD
             md.Clear();
             writevertex = true;
         }
-        public void RipModel(string file)
+        public void RipModel(string file, bool isSingleObj = false)
         {
             NsbmdPolygon polygon;
             int matId;
@@ -3153,7 +3153,7 @@ namespace LibNDSFormats.NSBMD
                 num3++;
             }
             File.Create(file).Close();
-            HelixToolkit.ObjExporter exporter = new HelixToolkit.ObjExporter(file, "Created with Spiky's DS Map Editor " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString());
+            HelixToolkit.ObjExporter exporter = new HelixToolkit.ObjExporter(file, "Created with Spiky's DS Map Editor " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(), isSingleObj);
             int index = 0;
             foreach (MKDS_Course_Editor.Export3DTools.Group group in list)
             {

@@ -29,29 +29,29 @@ namespace WindowsFormsApplication1
 
         private void Form3_2_Trainer_Class_Editor_Load(object sender, EventArgs e)
         {
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
-                path = Form1.workingFolder + @"data\msgdata\msg\0560";
-                Narc.Open(Form1.workingFolder + @"data\poketool\trgra\trfgra.narc").ExtractToFolder(Form1.workingFolder + @"data\poketool\trgra\trfgra");
-                spritePath = Form1.workingFolder + @"data\poketool\trgra\trfgra";
+                path = FormMain.workingFolder + @"data\msgdata\msg\0560";
+                Narc.Open(FormMain.workingFolder + @"data\poketool\trgra\trfgra.narc").ExtractToFolder(FormMain.workingFolder + @"data\poketool\trgra\trfgra");
+                spritePath = FormMain.workingFolder + @"data\poketool\trgra\trfgra";
             }
-            if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
-                path = Form1.workingFolder + @"data\msgdata\pl_msg\0619";
-                Narc.Open(Form1.workingFolder + @"data\poketool\trgra\trfgra.narc").ExtractToFolder(Form1.workingFolder + @"data\poketool\trgra\trfgra");
-                spritePath = Form1.workingFolder + @"data\poketool\trgra\trfgra";
+                path = FormMain.workingFolder + @"data\msgdata\pl_msg\0619";
+                Narc.Open(FormMain.workingFolder + @"data\poketool\trgra\trfgra.narc").ExtractToFolder(FormMain.workingFolder + @"data\poketool\trgra\trfgra");
+                spritePath = FormMain.workingFolder + @"data\poketool\trgra\trfgra";
             }
-            if (Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049)
+            if (FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049)
             {
-                path = Form1.workingFolder + @"data\a\0\2\text\0730";
-                Narc.Open(Form1.workingFolder + @"data\a\0\5\8").ExtractToFolder(Form1.workingFolder + @"data\a\0\5\trfgra");
-                spritePath = Form1.workingFolder + @"data\a\0\5\trfgra";
+                path = FormMain.workingFolder + @"data\a\0\2\text\0730";
+                Narc.Open(FormMain.workingFolder + @"data\a\0\5\8").ExtractToFolder(FormMain.workingFolder + @"data\a\0\5\trfgra");
+                spritePath = FormMain.workingFolder + @"data\a\0\5\trfgra";
             }
-            if (Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+            if (FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
             {
-                path = Form1.workingFolder + @"data\a\0\2\text\0720";
-                Narc.Open(Form1.workingFolder + @"data\a\0\5\8").ExtractToFolder(Form1.workingFolder + @"data\a\0\5\trfgra");
-                spritePath = Form1.workingFolder + @"data\a\0\5\trfgra";
+                path = FormMain.workingFolder + @"data\a\0\2\text\0720";
+                Narc.Open(FormMain.workingFolder + @"data\a\0\5\8").ExtractToFolder(FormMain.workingFolder + @"data\a\0\5\trfgra");
+                spritePath = FormMain.workingFolder + @"data\a\0\5\trfgra";
             }
             #region Read Trainer Class Names
             BinaryReader readText = new BinaryReader(File.OpenRead(path));
@@ -142,7 +142,7 @@ namespace WindowsFormsApplication1
             textBox1.Text = classNames[comboBox1.SelectedIndex];
             Bitmap sprite = new Bitmap(160, 80, PixelFormat.Format4bppIndexed);
             BinaryReader readPalette;
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
                 readPalette = new BinaryReader(File.OpenRead(spritePath + "\\" + (comboBox1.SelectedIndex * 2 + 1).ToString("D4")));
             }
@@ -165,7 +165,7 @@ namespace WindowsFormsApplication1
             sprite.Palette = palette;
 
             BinaryReader readSprite;
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
                 readSprite = new BinaryReader(File.OpenRead(spritePath + "\\" + (comboBox1.SelectedIndex * 2).ToString("D4")));
             }
@@ -179,7 +179,7 @@ namespace WindowsFormsApplication1
             {
                 numArray[i] = readSprite.ReadUInt16();
             }
-            if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
                 uint num = numArray[0x0];
                 for (int j = 0; j < 0xC80; j++)
@@ -254,7 +254,7 @@ namespace WindowsFormsApplication1
                 0x54, 0x54, 0x4c, 80, 0x38, 0, 0, 0, 4, 0, 10, 0, 0, 0, 0, 0, 
                 0x20, 0, 0, 0, 0x10, 0, 0, 0};
             BinaryWriter writePalette;
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
                 writePalette = new BinaryWriter(File.Create(spritePath + "\\" + (comboBox1.SelectedIndex * 2 + 1).ToString("D4")));
             }
@@ -276,7 +276,7 @@ namespace WindowsFormsApplication1
             writePalette.Close();
 
             BinaryWriter writeSprite;
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
                 writeSprite = new BinaryWriter(File.Create(spritePath + "\\" + (comboBox1.SelectedIndex * 2).ToString("D4")));
             }
@@ -295,7 +295,7 @@ namespace WindowsFormsApplication1
             {
                 numArray2[i] = (ushort)((((destination[i * 4] & 15) | ((destination[(i * 4) + 1] & 15) << 4)) | ((destination[(i * 4) + 2] & 15) << 8)) | ((destination[(i * 4) + 3] & 15) << 12));
             }
-            if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
                 uint num2 = 0;
                 uint num = numArray[0x0];
@@ -352,15 +352,15 @@ namespace WindowsFormsApplication1
 
         private void Form3_2_Trainer_Class_Editor_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
-                Narc.FromFolder(Form1.workingFolder + @"data\poketool\trgra\trfgra").Save(Form1.workingFolder + @"data\poketool\trgra\trfgra.narc");
-                Directory.Delete(Form1.workingFolder + @"data\poketool\trgra\trfgra", true);
+                Narc.FromFolder(FormMain.workingFolder + @"data\poketool\trgra\trfgra").Save(FormMain.workingFolder + @"data\poketool\trgra\trfgra.narc");
+                Directory.Delete(FormMain.workingFolder + @"data\poketool\trgra\trfgra", true);
             }
-            if (Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+            if (FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
             {
-                Narc.FromFolder(Form1.workingFolder + @"data\a\0\5\trfgra").Save(Form1.workingFolder + @"data\a\0\5\8");
-                Directory.Delete(Form1.workingFolder + @"data\a\0\5\trfgra", true);
+                Narc.FromFolder(FormMain.workingFolder + @"data\a\0\5\trfgra").Save(FormMain.workingFolder + @"data\a\0\5\8");
+                Directory.Delete(FormMain.workingFolder + @"data\a\0\5\trfgra", true);
             }
         }
 
@@ -368,7 +368,7 @@ namespace WindowsFormsApplication1
         {
             classNames.Add("TRAINER");
             comboBox1.Items.Add(comboBox1.Items.Count + ": " + "TRAINER");
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
                 File.Copy(spritePath + "\\" + "0000", spritePath + "\\" + ((comboBox1.Items.Count - 1) * 2).ToString("D4"));
                 File.Copy(spritePath + "\\" + "0001", spritePath + "\\" + ((comboBox1.Items.Count - 1) * 2 + 1).ToString("D4"));
@@ -394,7 +394,7 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e) // Remove
         {
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
                 File.Delete(spritePath + "\\" + ((comboBox1.Items.Count - 1) * 2).ToString("D4"));
                 File.Delete(spritePath + "\\" + ((comboBox1.Items.Count - 1) * 2 + 1).ToString("D4"));

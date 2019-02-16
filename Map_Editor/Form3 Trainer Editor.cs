@@ -37,69 +37,69 @@ namespace WindowsFormsApplication1
         private void Form3_Load(object sender, EventArgs e)
         {
             #region Read Pokémon Names
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041)
             {
-                textPokePath = Form1.workingFolder + @"data\msgdata\msg\0362";
-                textItemPath = Form1.workingFolder + @"data\msgdata\msg\0344";
-                textAttackPath = Form1.workingFolder + @"data\msgdata\msg\0588";
-                textClassPath = Form1.workingFolder + @"data\msgdata\msg\0560";
-                textNamePath = Form1.workingFolder + @"data\msgdata\msg\0559";
+                textPokePath = FormMain.workingFolder + @"data\msgdata\msg\0362";
+                textItemPath = FormMain.workingFolder + @"data\msgdata\msg\0344";
+                textAttackPath = FormMain.workingFolder + @"data\msgdata\msg\0588";
+                textClassPath = FormMain.workingFolder + @"data\msgdata\msg\0560";
+                textNamePath = FormMain.workingFolder + @"data\msgdata\msg\0559";
             }
-            if (Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041)
+            if (FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041)
             {
-                textPokePath = Form1.workingFolder + @"data\msgdata\msg\0356";
-                textItemPath = Form1.workingFolder + @"data\msgdata\msg\0341";
-                textAttackPath = Form1.workingFolder + @"data\msgdata\msg\0575";
-                textClassPath = Form1.workingFolder + @"data\msgdata\msg\0560";
-                textNamePath = Form1.workingFolder + @"data\msgdata\msg\0559";
+                textPokePath = FormMain.workingFolder + @"data\msgdata\msg\0356";
+                textItemPath = FormMain.workingFolder + @"data\msgdata\msg\0341";
+                textAttackPath = FormMain.workingFolder + @"data\msgdata\msg\0575";
+                textClassPath = FormMain.workingFolder + @"data\msgdata\msg\0560";
+                textNamePath = FormMain.workingFolder + @"data\msgdata\msg\0559";
             }
-            if (Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
-                textPokePath = Form1.workingFolder + @"data\msgdata\msg\0357";
-                textItemPath = Form1.workingFolder + @"data\msgdata\msg\0342";
-                textAttackPath = Form1.workingFolder + @"data\msgdata\msg\0577";
-                textClassPath = Form1.workingFolder + @"data\msgdata\msg\0560";
-                textNamePath = Form1.workingFolder + @"data\msgdata\msg\0559";
+                textPokePath = FormMain.workingFolder + @"data\msgdata\msg\0357";
+                textItemPath = FormMain.workingFolder + @"data\msgdata\msg\0342";
+                textAttackPath = FormMain.workingFolder + @"data\msgdata\msg\0577";
+                textClassPath = FormMain.workingFolder + @"data\msgdata\msg\0560";
+                textNamePath = FormMain.workingFolder + @"data\msgdata\msg\0559";
             }
-            if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043)
+            if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043)
             {
-                textPokePath = Form1.workingFolder + @"data\msgdata\pl_msg\0412";
-                textItemPath = Form1.workingFolder + @"data\msgdata\pl_msg\0392";
-                textAttackPath = Form1.workingFolder + @"data\msgdata\pl_msg\0647";
-                textClassPath = Form1.workingFolder + @"data\msgdata\pl_msg\0619";
-                textNamePath = Form1.workingFolder + @"data\msgdata\pl_msg\0618";
+                textPokePath = FormMain.workingFolder + @"data\msgdata\pl_msg\0412";
+                textItemPath = FormMain.workingFolder + @"data\msgdata\pl_msg\0392";
+                textAttackPath = FormMain.workingFolder + @"data\msgdata\pl_msg\0647";
+                textClassPath = FormMain.workingFolder + @"data\msgdata\pl_msg\0619";
+                textNamePath = FormMain.workingFolder + @"data\msgdata\pl_msg\0618";
             }
-            if (Form1.gameID == 0x4A555043)
+            if (FormMain.gameID == 0x4A555043)
             {
-                textPokePath = Form1.workingFolder + @"data\msgdata\pl_msg\0408";
-                textItemPath = Form1.workingFolder + @"data\msgdata\pl_msg\0390";
-                textAttackPath = Form1.workingFolder + @"data\msgdata\pl_msg\0636";
-                textClassPath = Form1.workingFolder + @"data\msgdata\pl_msg\0619";
-                textNamePath = Form1.workingFolder + @"data\msgdata\pl_msg\0618";
+                textPokePath = FormMain.workingFolder + @"data\msgdata\pl_msg\0408";
+                textItemPath = FormMain.workingFolder + @"data\msgdata\pl_msg\0390";
+                textAttackPath = FormMain.workingFolder + @"data\msgdata\pl_msg\0636";
+                textClassPath = FormMain.workingFolder + @"data\msgdata\pl_msg\0619";
+                textNamePath = FormMain.workingFolder + @"data\msgdata\pl_msg\0618";
             }
-            if (Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x4B555043)
             {
-                textPokePath = Form1.workingFolder + @"data\msgdata\pl_msg\0408";
-                textItemPath = Form1.workingFolder + @"data\msgdata\pl_msg\0390";
-                textAttackPath = Form1.workingFolder + @"data\msgdata\pl_msg\0667";
-                textClassPath = Form1.workingFolder + @"data\msgdata\pl_msg\0619";
-                textNamePath = Form1.workingFolder + @"data\msgdata\pl_msg\0618";
+                textPokePath = FormMain.workingFolder + @"data\msgdata\pl_msg\0408";
+                textItemPath = FormMain.workingFolder + @"data\msgdata\pl_msg\0390";
+                textAttackPath = FormMain.workingFolder + @"data\msgdata\pl_msg\0667";
+                textClassPath = FormMain.workingFolder + @"data\msgdata\pl_msg\0619";
+                textNamePath = FormMain.workingFolder + @"data\msgdata\pl_msg\0618";
             }
-            if (Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049)
+            if (FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049)
             {
-                textPokePath = Form1.workingFolder + @"data\a\0\2\text\0237";
-                textItemPath = Form1.workingFolder + @"data\a\0\2\text\0222";
-                textAttackPath = Form1.workingFolder + @"data\a\0\2\text\0750";
-                textClassPath = Form1.workingFolder + @"data\a\0\2\text\0730";
-                textNamePath = Form1.workingFolder + @"data\a\0\2\text\0729";
+                textPokePath = FormMain.workingFolder + @"data\a\0\2\text\0237";
+                textItemPath = FormMain.workingFolder + @"data\a\0\2\text\0222";
+                textAttackPath = FormMain.workingFolder + @"data\a\0\2\text\0750";
+                textClassPath = FormMain.workingFolder + @"data\a\0\2\text\0730";
+                textNamePath = FormMain.workingFolder + @"data\a\0\2\text\0729";
             }
-            if (Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+            if (FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
             {
-                textPokePath = Form1.workingFolder + @"data\a\0\2\text\0232";
-                textItemPath = Form1.workingFolder + @"data\a\0\2\text\0219";
-                textAttackPath = Form1.workingFolder + @"data\a\0\2\text\0739";
-                textClassPath = Form1.workingFolder + @"data\a\0\2\text\0720";
-                textNamePath = Form1.workingFolder + @"data\a\0\2\text\0719";
+                textPokePath = FormMain.workingFolder + @"data\a\0\2\text\0232";
+                textItemPath = FormMain.workingFolder + @"data\a\0\2\text\0219";
+                textAttackPath = FormMain.workingFolder + @"data\a\0\2\text\0739";
+                textClassPath = FormMain.workingFolder + @"data\a\0\2\text\0720";
+                textNamePath = FormMain.workingFolder + @"data\a\0\2\text\0719";
             }
             System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(textPokePath));
             int stringCount = (int)readText.ReadUInt16();
@@ -648,19 +648,19 @@ namespace WindowsFormsApplication1
             }
             #endregion
 
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
-                Narc.Open(Form1.workingFolder + @"data\poketool\trainer\trdata.narc").ExtractToFolder(Form1.workingFolder + @"data\poketool\trainer\trdata\");
-                Narc.Open(Form1.workingFolder + @"data\poketool\trainer\trpoke.narc").ExtractToFolder(Form1.workingFolder + @"data\poketool\trainer\trpoke\");
-                trdataPath = Form1.workingFolder + @"data\poketool\trainer\trdata";
-                trpokePath = Form1.workingFolder + @"data\poketool\trainer\trpoke";
+                Narc.Open(FormMain.workingFolder + @"data\poketool\trainer\trdata.narc").ExtractToFolder(FormMain.workingFolder + @"data\poketool\trainer\trdata\");
+                Narc.Open(FormMain.workingFolder + @"data\poketool\trainer\trpoke.narc").ExtractToFolder(FormMain.workingFolder + @"data\poketool\trainer\trpoke\");
+                trdataPath = FormMain.workingFolder + @"data\poketool\trainer\trdata";
+                trpokePath = FormMain.workingFolder + @"data\poketool\trainer\trpoke";
             }
             else
             {
-                Narc.Open(Form1.workingFolder + @"data\a\0\5\5").ExtractToFolder(Form1.workingFolder + @"data\a\0\5\trdata\");
-                Narc.Open(Form1.workingFolder + @"data\a\0\5\6").ExtractToFolder(Form1.workingFolder + @"data\a\0\5\trpoke\");
-                trdataPath = Form1.workingFolder + @"data\a\0\5\trdata";
-                trpokePath = Form1.workingFolder + @"data\a\0\5\trpoke";
+                Narc.Open(FormMain.workingFolder + @"data\a\0\5\5").ExtractToFolder(FormMain.workingFolder + @"data\a\0\5\trdata\");
+                Narc.Open(FormMain.workingFolder + @"data\a\0\5\6").ExtractToFolder(FormMain.workingFolder + @"data\a\0\5\trpoke\");
+                trdataPath = FormMain.workingFolder + @"data\a\0\5\trdata";
+                trpokePath = FormMain.workingFolder + @"data\a\0\5\trpoke";
             }
             for (int i = 0; i < Directory.GetFiles(trdataPath).Length; i++)
             {
@@ -733,7 +733,7 @@ namespace WindowsFormsApplication1
                     comboBox9.SelectedIndex = readPokemon.ReadUInt16();
                     comboBox8.SelectedIndex = readPokemon.ReadUInt16();
                 }
-                if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+                if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
                 {
                     readPokemon.BaseStream.Position += 0x2;
                 }
@@ -755,7 +755,7 @@ namespace WindowsFormsApplication1
                         comboBox15.SelectedIndex = readPokemon.ReadUInt16();
                         comboBox14.SelectedIndex = readPokemon.ReadUInt16();
                     }
-                    if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+                    if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
                     {
                         readPokemon.BaseStream.Position += 0x2;
                     }
@@ -777,7 +777,7 @@ namespace WindowsFormsApplication1
                             comboBox21.SelectedIndex = readPokemon.ReadUInt16();
                             comboBox20.SelectedIndex = readPokemon.ReadUInt16();
                         }
-                        if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+                        if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
                         {
                             readPokemon.BaseStream.Position += 0x2;
                         }
@@ -799,7 +799,7 @@ namespace WindowsFormsApplication1
                                 comboBox27.SelectedIndex = readPokemon.ReadUInt16();
                                 comboBox26.SelectedIndex = readPokemon.ReadUInt16();
                             }
-                            if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+                            if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
                             {
                                 readPokemon.BaseStream.Position += 0x2;
                             }
@@ -821,7 +821,7 @@ namespace WindowsFormsApplication1
                                     comboBox33.SelectedIndex = readPokemon.ReadUInt16();
                                     comboBox32.SelectedIndex = readPokemon.ReadUInt16();
                                 }
-                                if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+                                if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
                                 {
                                     readPokemon.BaseStream.Position += 0x2;
                                 }
@@ -997,19 +997,19 @@ namespace WindowsFormsApplication1
 
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
-                Narc.FromFolder(Form1.workingFolder + @"data\poketool\trainer\trdata\").Save(Form1.workingFolder + @"data\poketool\trainer\trdata.narc");
-                Narc.FromFolder(Form1.workingFolder + @"data\poketool\trainer\trpoke\").Save(Form1.workingFolder + @"data\poketool\trainer\trpoke.narc");
-                Directory.Delete(Form1.workingFolder + @"data\poketool\trainer\trdata\", true);
-                Directory.Delete(Form1.workingFolder + @"data\poketool\trainer\trpoke\", true);
+                Narc.FromFolder(FormMain.workingFolder + @"data\poketool\trainer\trdata\").Save(FormMain.workingFolder + @"data\poketool\trainer\trdata.narc");
+                Narc.FromFolder(FormMain.workingFolder + @"data\poketool\trainer\trpoke\").Save(FormMain.workingFolder + @"data\poketool\trainer\trpoke.narc");
+                Directory.Delete(FormMain.workingFolder + @"data\poketool\trainer\trdata\", true);
+                Directory.Delete(FormMain.workingFolder + @"data\poketool\trainer\trpoke\", true);
             }
             else
             {
-                Narc.FromFolder(Form1.workingFolder + @"data\a\0\5\trdata\").Save(Form1.workingFolder + @"data\a\0\5\5");
-                Narc.FromFolder(Form1.workingFolder + @"data\a\0\5\trpoke\").Save(Form1.workingFolder + @"data\a\0\5\6");
-                Directory.Delete(Form1.workingFolder + @"data\a\0\5\trdata\", true);
-                Directory.Delete(Form1.workingFolder + @"data\a\0\5\trpoke\", true);
+                Narc.FromFolder(FormMain.workingFolder + @"data\a\0\5\trdata\").Save(FormMain.workingFolder + @"data\a\0\5\5");
+                Narc.FromFolder(FormMain.workingFolder + @"data\a\0\5\trpoke\").Save(FormMain.workingFolder + @"data\a\0\5\6");
+                Directory.Delete(FormMain.workingFolder + @"data\a\0\5\trdata\", true);
+                Directory.Delete(FormMain.workingFolder + @"data\a\0\5\trpoke\", true);
             }
         }
 
@@ -1073,7 +1073,7 @@ namespace WindowsFormsApplication1
                     writePokemon.Write((UInt16)comboBox9.SelectedIndex);
                     writePokemon.Write((UInt16)comboBox8.SelectedIndex);
                 }
-                if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+                if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
                 {
                     writePokemon.Write((UInt16)0x0);
                 }
@@ -1093,7 +1093,7 @@ namespace WindowsFormsApplication1
                         writePokemon.Write((UInt16)comboBox15.SelectedIndex);
                         writePokemon.Write((UInt16)comboBox14.SelectedIndex);
                     }
-                    if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+                    if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
                     {
                         writePokemon.Write((UInt16)0x0);
                     }
@@ -1113,7 +1113,7 @@ namespace WindowsFormsApplication1
                             writePokemon.Write((UInt16)comboBox21.SelectedIndex);
                             writePokemon.Write((UInt16)comboBox20.SelectedIndex);
                         }
-                        if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+                        if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
                         {
                             writePokemon.Write((UInt16)0x0);
                         }
@@ -1133,7 +1133,7 @@ namespace WindowsFormsApplication1
                                 writePokemon.Write((UInt16)comboBox27.SelectedIndex);
                                 writePokemon.Write((UInt16)comboBox26.SelectedIndex);
                             }
-                            if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+                            if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
                             {
                                 writePokemon.Write((UInt16)0x0);
                             }
@@ -1153,7 +1153,7 @@ namespace WindowsFormsApplication1
                                     writePokemon.Write((UInt16)comboBox33.SelectedIndex);
                                     writePokemon.Write((UInt16)comboBox32.SelectedIndex);
                                 }
-                                if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+                                if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
                                 {
                                     writePokemon.Write((UInt16)0x0);
                                 }
@@ -1173,7 +1173,7 @@ namespace WindowsFormsApplication1
                                         writePokemon.Write((UInt16)comboBox39.SelectedIndex);
                                         writePokemon.Write((UInt16)comboBox38.SelectedIndex);
                                     }
-                                    if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+                                    if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
                                     {
                                         writePokemon.Write((UInt16)0x0);
                                     }

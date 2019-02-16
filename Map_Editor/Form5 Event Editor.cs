@@ -489,44 +489,44 @@ namespace WindowsFormsApplication1
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
-                NarcAPI.Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release");
-                eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release";
+                NarcAPI.Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release");
+                eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release";
             }
-            if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041)
+            if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041)
             {
-                NarcAPI.Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event");
-                eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event";
+                NarcAPI.Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event");
+                eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event";
             }
-            if (Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+            if (FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
             {
-                NarcAPI.Narc.Open(Form1.workingFolder + @"data\a\0\3\2").ExtractToFolder(Form1.workingFolder + @"data\a\0\3\event");
-                eventPath = Form1.workingFolder + @"data\a\0\3\event";
+                NarcAPI.Narc.Open(FormMain.workingFolder + @"data\a\0\3\2").ExtractToFolder(FormMain.workingFolder + @"data\a\0\3\event");
+                eventPath = FormMain.workingFolder + @"data\a\0\3\event";
             }
             for (int i = 0; i < Directory.GetFiles(eventPath).Length; i++)
             {
                 comboBox1.Items.Add(rm.GetString("eventList") + i);
             }
-            comboBox1.SelectedIndex = Form1.eventIndex;
+            comboBox1.SelectedIndex = FormMain.eventIndex;
         }
 
         private void Form5_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release").Save(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc");
-                Directory.Delete(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release", true);
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release").Save(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc");
+                Directory.Delete(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release", true);
             }
-            if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041)
+            if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041)
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event").Save(Form1.workingFolder + @"data\fielddata\eventdata\zone_event.narc");
-                Directory.Delete(Form1.workingFolder + @"data\fielddata\eventdata\zone_event", true);
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event").Save(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event.narc");
+                Directory.Delete(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event", true);
             }
-            if (Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+            if (FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\a\0\3\event").Save(Form1.workingFolder + @"data\a\0\3\2");
-                Directory.Delete(Form1.workingFolder + @"data\a\0\3\event", true);
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\a\0\3\event").Save(FormMain.workingFolder + @"data\a\0\3\2");
+                Directory.Delete(FormMain.workingFolder + @"data\a\0\3\event", true);
             }
         }
     }

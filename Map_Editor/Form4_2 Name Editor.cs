@@ -27,11 +27,11 @@ namespace WindowsFormsApplication1
             #region Map Names
             string path;
             int mainKey = 31881;
-            if (Form1.isBW)
+            if (FormMain.isBW)
             {
                 path = "0089";
             }
-            else if (Form1.isB2W2)
+            else if (FormMain.isB2W2)
             {
                 path = "0109";
             }
@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1
                 loadGenIV();
                 return;
             }
-            System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\0\texts\" + path));
+            System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\0\texts\" + path));
             int nameSections = readText.ReadUInt16();
             uint[] sectionOffset = new uint[3];
             uint[] sectionSize = new uint[3];
@@ -100,48 +100,48 @@ namespace WindowsFormsApplication1
             }
             readText.Close();
             #endregion
-            comboBox1.SelectedIndex = Form1.wildIndex;
+            comboBox1.SelectedIndex = FormMain.wildIndex;
         }
 
         private void loadGenIV()
         {
             #region Names
             string path;
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041)
             {
-                path = Form1.workingFolder + @"data\msgdata\msg\0382";
+                path = FormMain.workingFolder + @"data\msgdata\msg\0382";
             }
-            else if (Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041)
+            else if (FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041)
             {
-                path = Form1.workingFolder + @"data\msgdata\msg\0374";
+                path = FormMain.workingFolder + @"data\msgdata\msg\0374";
             }
-            else if (Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            else if (FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
-                path = Form1.workingFolder + @"data\msgdata\msg\0376";
+                path = FormMain.workingFolder + @"data\msgdata\msg\0376";
             }
-            else if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043)
+            else if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043)
             {
-                path = Form1.workingFolder + @"data\msgdata\pl_msg\0433";
+                path = FormMain.workingFolder + @"data\msgdata\pl_msg\0433";
             }
-            else if (Form1.gameID == 0x4A555043)
+            else if (FormMain.gameID == 0x4A555043)
             {
-                path = Form1.workingFolder + @"data\msgdata\pl_msg\0427";
+                path = FormMain.workingFolder + @"data\msgdata\pl_msg\0427";
             }
-            else if (Form1.gameID == 0x4A555043)
+            else if (FormMain.gameID == 0x4A555043)
             {
-                path = Form1.workingFolder + @"data\msgdata\pl_msg\0428";
+                path = FormMain.workingFolder + @"data\msgdata\pl_msg\0428";
             }
-            else if (Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049)
+            else if (FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049)
             {
-                path = Form1.workingFolder + @"data\a\0\2\text\0279";
+                path = FormMain.workingFolder + @"data\a\0\2\text\0279";
             }
-            else if (Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049)
+            else if (FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049)
             {
-                path = Form1.workingFolder + @"data\a\0\2\text\0272";
+                path = FormMain.workingFolder + @"data\a\0\2\text\0272";
             }
             else
             {
-                path = Form1.workingFolder + @"data\a\0\2\text\0274";
+                path = FormMain.workingFolder + @"data\a\0\2\text\0274";
             }
             System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(path));
             int stringCount = (int)readText.ReadUInt16();
@@ -219,12 +219,12 @@ namespace WindowsFormsApplication1
             }
             readText.Close();
             #endregion
-            comboBox1.SelectedIndex = Form1.wildIndex;
+            comboBox1.SelectedIndex = FormMain.wildIndex;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1.wildIndex = comboBox1.SelectedIndex;
+            FormMain.wildIndex = comboBox1.SelectedIndex;
             this.Close();
         }
     }

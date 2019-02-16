@@ -26,7 +26,7 @@ using Assimp;
 namespace WindowsFormsApplication1
 {
 
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         #region RM
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.WinFormStrings", Assembly.GetExecutingAssembly());
@@ -108,7 +108,7 @@ namespace WindowsFormsApplication1
         public List<List<MemoryStream>> movementList = new List<List<MemoryStream>>();
         #endregion
 
-        public Form1()
+        public FormMain()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en");
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
@@ -231,8 +231,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq_release.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq_release");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq_release").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data_release").Length;
@@ -251,7 +251,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\msg\0382"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\msg\0382"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -452,8 +452,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq_release.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq_release");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq_release").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data_release").Length;
@@ -472,7 +472,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\msg\0382"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\msg\0382"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -673,8 +673,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq_release.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq_release");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq_release").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data_release").Length;
@@ -694,7 +694,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\msg\0382"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\msg\0382"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -895,8 +895,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq_release.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq_release");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq_release").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data_release").Length;
@@ -916,7 +916,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\msg\0382"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\msg\0382"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -1117,8 +1117,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq_release.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq_release");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq_release").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data_release").Length;
@@ -1138,7 +1138,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\msg\0382"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\msg\0382"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -1339,8 +1339,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data").Length;
@@ -1360,7 +1360,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\msg\0374"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\msg\0374"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -1561,8 +1561,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq_release.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq_release");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event_release";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event_release";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq_release").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data_release").Length;
@@ -1582,7 +1582,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\msg\0376"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\msg\0376"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -1791,8 +1791,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data").Length;
@@ -1811,7 +1811,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\pl_msg\0433"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\pl_msg\0433"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -2015,8 +2015,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data").Length;
@@ -2035,7 +2035,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\pl_msg\0433"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\pl_msg\0433"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -2239,8 +2239,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data").Length;
@@ -2259,7 +2259,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\pl_msg\0433"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\pl_msg\0433"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -2463,8 +2463,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data").Length;
@@ -2483,7 +2483,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\pl_msg\0433"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\pl_msg\0433"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -2687,8 +2687,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data").Length;
@@ -2707,7 +2707,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\pl_msg\0433"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\pl_msg\0433"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -2911,8 +2911,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data").Length;
@@ -2931,7 +2931,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\pl_msg\0427"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\pl_msg\0427"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -3135,8 +3135,8 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_data.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_data");
                     Narc.Open(workingFolder + @"data\fielddata\areadata\area_build_model\area_build.narc").ExtractToFolder(workingFolder + @"data\fielddata\areadata\area_build_model\area_build");
                     Narc.Open(workingFolder + @"data\fielddata\script\scr_seq.narc").ExtractToFolder(workingFolder + @"data\fielddata\script\scr_seq");
-                    Narc.Open(Form1.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\eventdata\zone_event");
-                    eventPath = Form1.workingFolder + @"data\fielddata\eventdata\zone_event";
+                    Narc.Open(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\eventdata\zone_event");
+                    eventPath = FormMain.workingFolder + @"data\fielddata\eventdata\zone_event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\fielddata\script\scr_seq").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\fielddata\mapmatrix\map_matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\fielddata\land_data\land_data").Length;
@@ -3155,7 +3155,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\msgdata\pl_msg\0428"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\msgdata\pl_msg\0428"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -3357,7 +3357,7 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\a\0\2\7").ExtractToFolder(workingFolder + @"data\a\0\2\text");
                     Narc.Open(workingFolder + @"data\a\0\1\2").ExtractToFolder(workingFolder + @"data\a\0\1\script");
                     Narc.Open(workingFolder + @"data\a\0\3\2").ExtractToFolder(workingFolder + @"data\a\0\3\event");
-                    eventPath = Form1.workingFolder + @"data\a\0\3\event";
+                    eventPath = FormMain.workingFolder + @"data\a\0\3\event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\a\0\1\script").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\a\0\4\matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\a\0\6\map").Length;
@@ -3390,7 +3390,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\2\text\0279"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\2\text\0279"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -3569,7 +3569,7 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\a\0\2\7").ExtractToFolder(workingFolder + @"data\a\0\2\text");
                     Narc.Open(workingFolder + @"data\a\0\1\2").ExtractToFolder(workingFolder + @"data\a\0\1\script");
                     Narc.Open(workingFolder + @"data\a\0\3\2").ExtractToFolder(workingFolder + @"data\a\0\3\event");
-                    eventPath = Form1.workingFolder + @"data\a\0\3\event";
+                    eventPath = FormMain.workingFolder + @"data\a\0\3\event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\a\0\1\script").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\a\0\4\matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\a\0\6\map").Length;
@@ -3602,7 +3602,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\2\text\0279"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\2\text\0279"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -3781,7 +3781,7 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\a\0\2\7").ExtractToFolder(workingFolder + @"data\a\0\2\text");
                     Narc.Open(workingFolder + @"data\a\0\1\2").ExtractToFolder(workingFolder + @"data\a\0\1\script");
                     Narc.Open(workingFolder + @"data\a\0\3\2").ExtractToFolder(workingFolder + @"data\a\0\3\event");
-                    eventPath = Form1.workingFolder + @"data\a\0\3\event";
+                    eventPath = FormMain.workingFolder + @"data\a\0\3\event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\a\0\1\script").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\a\0\4\matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\a\0\6\map").Length;
@@ -3814,7 +3814,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\2\text\0279"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\2\text\0279"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -4003,7 +4003,7 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\a\0\2\7").ExtractToFolder(workingFolder + @"data\a\0\2\text");
                     Narc.Open(workingFolder + @"data\a\0\1\2").ExtractToFolder(workingFolder + @"data\a\0\1\script");
                     Narc.Open(workingFolder + @"data\a\0\3\2").ExtractToFolder(workingFolder + @"data\a\0\3\event");
-                    eventPath = Form1.workingFolder + @"data\a\0\3\event";
+                    eventPath = FormMain.workingFolder + @"data\a\0\3\event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\a\0\1\script").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\a\0\4\matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\a\0\6\map").Length;
@@ -4036,7 +4036,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\2\text\0279"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\2\text\0279"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -4215,7 +4215,7 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\a\0\2\7").ExtractToFolder(workingFolder + @"data\a\0\2\text");
                     Narc.Open(workingFolder + @"data\a\0\1\2").ExtractToFolder(workingFolder + @"data\a\0\1\script");
                     Narc.Open(workingFolder + @"data\a\0\3\2").ExtractToFolder(workingFolder + @"data\a\0\3\event");
-                    eventPath = Form1.workingFolder + @"data\a\0\3\event";
+                    eventPath = FormMain.workingFolder + @"data\a\0\3\event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\a\0\1\script").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\a\0\4\matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\a\0\6\map").Length;
@@ -4248,7 +4248,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\2\text\0279"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\2\text\0279"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -4427,7 +4427,7 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\a\0\2\7").ExtractToFolder(workingFolder + @"data\a\0\2\text");
                     Narc.Open(workingFolder + @"data\a\0\1\2").ExtractToFolder(workingFolder + @"data\a\0\1\script");
                     Narc.Open(workingFolder + @"data\a\0\3\2").ExtractToFolder(workingFolder + @"data\a\0\3\event");
-                    eventPath = Form1.workingFolder + @"data\a\0\3\event";
+                    eventPath = FormMain.workingFolder + @"data\a\0\3\event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\a\0\1\script").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\a\0\4\matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\a\0\6\map").Length;
@@ -4460,7 +4460,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\2\text\0272"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\2\text\0272"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -4639,7 +4639,7 @@ namespace WindowsFormsApplication1
                     Narc.Open(workingFolder + @"data\a\0\2\7").ExtractToFolder(workingFolder + @"data\a\0\2\text");
                     Narc.Open(workingFolder + @"data\a\0\1\2").ExtractToFolder(workingFolder + @"data\a\0\1\script");
                     Narc.Open(workingFolder + @"data\a\0\3\2").ExtractToFolder(workingFolder + @"data\a\0\3\event");
-                    eventPath = Form1.workingFolder + @"data\a\0\3\event";
+                    eventPath = FormMain.workingFolder + @"data\a\0\3\event";
                     scriptCount = Directory.GetFiles(workingFolder + @"data\a\0\1\script").Length;
                     matrixCount = Directory.GetFiles(workingFolder + @"data\a\0\4\matrix").Length;
                     mapCount = Directory.GetFiles(workingFolder + @"data\a\0\6\map").Length;
@@ -4672,7 +4672,7 @@ namespace WindowsFormsApplication1
                     int rowNumber = 0;
                     nameText.Clear();
                     #region Names
-                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\2\text\0274"));
+                    System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\2\text\0274"));
                     int stringCount = (int)readText.ReadUInt16();
                     int initialKey = (int)readText.ReadUInt16();
                     int key1 = (initialKey * 0x2FD) & 0xFFFF;
@@ -5081,6 +5081,7 @@ namespace WindowsFormsApplication1
                     mapHeaderGridViewIV.Columns[16].HeaderText = rm.GetString("nameStyle");
                     mapHeaderGridViewIV.Columns[17].HeaderText = rm.GetString("flags");
                 }
+                
                 return;
             }
         }
@@ -7498,18 +7499,18 @@ namespace WindowsFormsApplication1
             saveModeON = true;
 
             #region Create 3D Model for Viewer
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
-                readMap.BaseStream.Position = 0x10 + Form1.permissionSize + Form1.buildingsSize;
+                readMap.BaseStream.Position = 0x10 + FormMain.permissionSize + FormMain.buildingsSize;
             }
             else
             {
-                readMap.BaseStream.Position = 0x14 + Form1.unknownSize + Form1.permissionSize + Form1.buildingsSize;
+                readMap.BaseStream.Position = 0x14 + FormMain.unknownSize + FormMain.permissionSize + FormMain.buildingsSize;
             }
             System.IO.BinaryWriter export = new System.IO.BinaryWriter(File.OpenWrite(Path.GetTempPath() + "map.nsbmd"));
             export.BaseStream.Position = 0x00;
-            export.BaseStream.SetLength(Form1.modelSize);
-            for (int i = 0; i < Form1.modelSize; i++)
+            export.BaseStream.SetLength(FormMain.modelSize);
+            for (int i = 0; i < FormMain.modelSize; i++)
             {
                 export.Write(readMap.ReadByte()); // Reads byte and writes it to file
             }
@@ -7861,7 +7862,7 @@ namespace WindowsFormsApplication1
                             {
                                 Model = _nsbmd.models[0]
                             };
-                            rendererOBJ.RipModel(ef.FileName);
+                            rendererOBJ.RipModel(ef.FileName, true);
                         }
                         catch (Exception exception)
                         {
@@ -7909,7 +7910,7 @@ namespace WindowsFormsApplication1
                             {
                                 Model = _nsbmd.models[0]
                             };
-                            rendererOBJ.RipModel(ef.FileName);
+                            rendererOBJ.RipModel(ef.FileName, true);
                         }
                         catch (Exception exception)
                         {
@@ -7918,18 +7919,18 @@ namespace WindowsFormsApplication1
                         return;
                     }
 
-                    System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4")));
-                    if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                    System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4")));
+                    if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                     {
-                        readMap.BaseStream.Position = 0x10 + Form1.permissionSize + Form1.buildingsSize;
+                        readMap.BaseStream.Position = 0x10 + FormMain.permissionSize + FormMain.buildingsSize;
                     }
                     else
                     {
-                        readMap.BaseStream.Position = 0x14 + Form1.unknownSize + Form1.permissionSize + Form1.buildingsSize;
+                        readMap.BaseStream.Position = 0x14 + FormMain.unknownSize + FormMain.permissionSize + FormMain.buildingsSize;
                     }
                     System.IO.BinaryWriter export = new System.IO.BinaryWriter(File.OpenWrite(ef.FileName));
                     export.BaseStream.Position = 0x00;
-                    export.BaseStream.SetLength(Form1.modelSize);
+                    export.BaseStream.SetLength(FormMain.modelSize);
 
                     for (int i = 0; i < 0xe; i++)
                     {
@@ -7940,12 +7941,12 @@ namespace WindowsFormsApplication1
                     export.Write((Int16)0x0);
                     export.Write(0x0); // Writes blank BTX offset
                     readMap.BaseStream.Position += 0x6;
-                    for (int i = 0; i < Form1.modelSize - 0x14; i++)
+                    for (int i = 0; i < FormMain.modelSize - 0x14; i++)
                     {
                         export.Write(readMap.ReadByte()); // Writes model section
                     }
                     readMap.Close();
-                    if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                    if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                     {
                         File.Copy(workingFolder + @"data\fielddata\areadata\area_map_tex\map_tex_set\" + (cmbTexturesMapGen4.SelectedIndex - 1).ToString("D4"), ef.FileName + "tex");
                     }
@@ -7962,7 +7963,7 @@ namespace WindowsFormsApplication1
                         export.Write(readTex.ReadByte()); // Writes BTX section
                     }
                     export.BaseStream.Position = 0x8;
-                    export.Write((int)((Form1.modelSize + 0x4) + texLength));
+                    export.Write((int)((FormMain.modelSize + 0x4) + texLength));
                     export.BaseStream.Position = 0x14;
                     export.Write((int)texOffset);
                     export.Close();
@@ -17032,7 +17033,7 @@ namespace WindowsFormsApplication1
             AssimpContext importer = new AssimpContext();
             Directory.CreateDirectory($"./maps/Materials");
 
-            string bldPath = Form1.workingFolder + @"data\a\0\4\building\";
+            string bldPath = FormMain.workingFolder + @"data\a\0\4\building\";
             List<int> matrixes = new List<int>();
             for (int k = 0; k < dataGridView13.Rows.Count; k++)
             {
@@ -17062,7 +17063,7 @@ namespace WindowsFormsApplication1
 
                                 label69.Text = "extracting : " + mapName;
 
-                                System.IO.BinaryReader read = new System.IO.BinaryReader(File.OpenRead(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4")));
+                                System.IO.BinaryReader read = new System.IO.BinaryReader(File.OpenRead(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4")));
 
                                 int permSize = (read.ReadByte() + (read.ReadByte() << 8) + (read.ReadByte() << 16) + (read.ReadByte() << 24)); // Read Move Permissions Section Size
                                 int buildSize = (read.ReadByte() + (read.ReadByte() << 8) + (read.ReadByte() << 16) + (read.ReadByte() << 24)); // Read Buildings Section Size
@@ -17074,13 +17075,13 @@ namespace WindowsFormsApplication1
                                 #region Buildings
                                 for (int h = 0; h < buildSize / 48; h++)
                                 {
-                                    if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                                    if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                                     {
-                                        read.BaseStream.Position = 0x10 + Form1.permissionSize + (0x0 + 0x30 * h);
+                                        read.BaseStream.Position = 0x10 + FormMain.permissionSize + (0x0 + 0x30 * h);
                                     }
                                     else
                                     {
-                                        read.BaseStream.Position = 0x14 + Form1.unknownSize + Form1.permissionSize + (0x0 + 0x30 * h);
+                                        read.BaseStream.Position = 0x14 + FormMain.unknownSize + FormMain.permissionSize + (0x0 + 0x30 * h);
                                     }
                                     uint buildingId = read.ReadUInt32(); // Reads Model Index
 
@@ -17220,7 +17221,7 @@ namespace WindowsFormsApplication1
 
                                 label69.Text = "extracting : " + mapName;
 
-                                System.IO.BinaryReader read = new System.IO.BinaryReader(File.OpenRead(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4")));
+                                System.IO.BinaryReader read = new System.IO.BinaryReader(File.OpenRead(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4")));
 
                                 int permSize = (read.ReadByte() + (read.ReadByte() << 8) + (read.ReadByte() << 16) + (read.ReadByte() << 24)); // Read Move Permissions Section Size
                                 int buildSize = (read.ReadByte() + (read.ReadByte() << 8) + (read.ReadByte() << 16) + (read.ReadByte() << 24)); // Read Buildings Section Size
@@ -17231,13 +17232,13 @@ namespace WindowsFormsApplication1
 
                                 for (int h = 0; h < buildSize / 48; h++)
                                 {
-                                    if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                                    if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                                     {
-                                        read.BaseStream.Position = 0x10 + Form1.permissionSize + (0x0 + 0x30 * h);
+                                        read.BaseStream.Position = 0x10 + FormMain.permissionSize + (0x0 + 0x30 * h);
                                     }
                                     else
                                     {
-                                        read.BaseStream.Position = 0x14 + Form1.unknownSize + Form1.permissionSize + (0x0 + 0x30 * h);
+                                        read.BaseStream.Position = 0x14 + FormMain.unknownSize + FormMain.permissionSize + (0x0 + 0x30 * h);
                                     }
                                     uint buildingId = read.ReadUInt32(); // Reads Model Index
 
@@ -17366,6 +17367,53 @@ namespace WindowsFormsApplication1
             }
 
             MessageBox.Show("Maps are extracted !");
+        }
+
+        private void txtSearchByName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearchByName.Text.Contains(','))
+            {
+                if(dataGridView13.DataSource == null)
+                {
+                    DataTable dt = new DataTable();
+                    foreach (DataGridViewColumn col in dataGridView13.Columns)
+                    {
+                        dt.Columns.Add(col.HeaderText);
+                    }
+
+                    foreach (DataGridViewRow row in dataGridView13.Rows)
+                    {
+                        //DataRow dRow = ((DataRowView)row.DataBoundItem).Row;
+                        DataRow dRow = dt.NewRow();
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            dRow[cell.ColumnIndex] = cell.Value;
+                        }
+                        dt.Rows.Add(dRow);
+                    }
+                    dataGridView13.Columns.Clear();
+                    dataGridView13.Rows.Clear();
+                    dataGridView13.DataSource = dt;
+                }
+                string[] field = txtSearchByName.Text.Split(',');
+                DataView view = (dataGridView13.DataSource as DataTable).DefaultView;
+                try
+                {
+                    view.RowFilter = "[" + field[0] + "] Like '%" + field[1] + "%'";
+                }
+                catch(Exception ex)
+                {
+                    string columns = "";
+                    foreach(DataGridViewColumn columnHeader in dataGridView13.Columns)
+                    {
+                        columns += columnHeader.HeaderText + Environment.NewLine;
+                    }
+                    MessageBox.Show("Search => error message : " + ex.Message +
+                        Environment.NewLine +
+                        "Supported columns : " + columns
+                        );
+                }
+            }
         }
     }
 }

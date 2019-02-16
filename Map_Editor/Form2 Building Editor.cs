@@ -34,7 +34,7 @@ namespace Map_Converter
             InitializeComponent();
             numericUpDown5.Visible = false;
             label8.Visible = false;
-            if (Form1.isBW || Form1.isB2W2)
+            if (FormMain.isBW || FormMain.isB2W2)
             {
                 label5.Visible = false;
                 label6.Visible = false;
@@ -44,8 +44,8 @@ namespace Map_Converter
                 textBox7.Visible = false;
                 numericUpDown5.Visible = true;
                 label8.Visible = true;
-                System.IO.BinaryReader read = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4")));
-                read.BaseStream.Position = Form1.vbldOffset;
+                System.IO.BinaryReader read = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4")));
+                read.BaseStream.Position = FormMain.vbldOffset;
                 amount = read.ReadInt32();
                 for (int i = 0; i < amount; i++) // Checks the number of buildings in the map
                 {
@@ -56,9 +56,9 @@ namespace Map_Converter
                 {
                     dataGridView1.Rows.Add(); // Creates 34x34 grid
                 }
-                if (Form1.mapType != 0x0002474E)
+                if (FormMain.mapType != 0x0002474E)
                 {
-                    read.BaseStream.Position = Form1.vpermOffset + 0x4;
+                    read.BaseStream.Position = FormMain.vpermOffset + 0x4;
                     for (int i = 0; i < 32; i++)
                     {
                         for (int j = 0; j < 32; j++)
@@ -97,19 +97,19 @@ namespace Map_Converter
             }
             else
             {
-                for (int i = 0; i < (Form1.buildingsSize / 48); i++) // Checks the number of buildings in the map
+                for (int i = 0; i < (FormMain.buildingsSize / 48); i++) // Checks the number of buildings in the map
                 {
                     listBox1.Items.Add(rm.GetString("building") + counter); // Adds building to listbox
                     counter = counter + 1; // Increases index number
                 }
-                System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4")));
-                if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4")));
+                if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                 {
                     readMap.BaseStream.Position = 0x10;
                 }
                 else
                 {
-                    readMap.BaseStream.Position = 0x14 + Form1.unknownSize;
+                    readMap.BaseStream.Position = 0x14 + FormMain.unknownSize;
                 }
                 for (int i = 0; i < 34; i++)
                 {
@@ -177,10 +177,10 @@ namespace Map_Converter
             button3.Enabled = true;
             button2.Enabled = true;
 
-            if (Form1.isBW || Form1.isB2W2)
+            if (FormMain.isBW || FormMain.isB2W2)
             {
-                System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4")));
-                readMap.BaseStream.Position = Form1.vbldOffset + 0x4 + listBox1.SelectedIndex * 0x10;
+                System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4")));
+                readMap.BaseStream.Position = FormMain.vbldOffset + 0x4 + listBox1.SelectedIndex * 0x10;
                 textBox1.Text = Convert.ToString(readMap.ReadUInt16()); // Reads X Flag
                 numericUpDown2.Value = readMap.ReadInt16(); // Reads X Tile
                 textBox8.Text = Convert.ToString(readMap.ReadUInt16()); // Reads Y Flag
@@ -195,14 +195,14 @@ namespace Map_Converter
             }
             else
             {
-                System.IO.BinaryReader read = new System.IO.BinaryReader(File.OpenRead(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4")));
-                if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                System.IO.BinaryReader read = new System.IO.BinaryReader(File.OpenRead(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4")));
+                if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                 {
-                    read.BaseStream.Position = 0x10 + Form1.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex);
+                    read.BaseStream.Position = 0x10 + FormMain.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex);
                 }
                 else
                 {
-                    read.BaseStream.Position = 0x14 + Form1.unknownSize + Form1.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex);
+                    read.BaseStream.Position = 0x14 + FormMain.unknownSize + FormMain.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex);
                 }
                 numericUpDown1.Value = read.ReadUInt32(); // Reads Model Index
                 textBox1.Text = Convert.ToString(read.ReadUInt16());
@@ -211,31 +211,31 @@ namespace Map_Converter
                 numericUpDown3.Value = read.ReadInt16(); // Reads Y Coordinates
                 textBox9.Text = Convert.ToString(read.ReadUInt16());
                 numericUpDown4.Value = read.ReadInt16(); // Reads Z Coordinates
-                if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                 {
-                    read.BaseStream.Position = 0x10 + Form1.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x1D);
+                    read.BaseStream.Position = 0x10 + FormMain.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x1D);
                 }
                 else
                 {
-                    read.BaseStream.Position = 0x14 + Form1.unknownSize + Form1.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x1D);
+                    read.BaseStream.Position = 0x14 + FormMain.unknownSize + FormMain.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x1D);
                 }
                 textBox7.Text = Convert.ToString(read.ReadInt16());
-                if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                 {
-                    read.BaseStream.Position = 0x10 + Form1.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x21);
+                    read.BaseStream.Position = 0x10 + FormMain.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x21);
                 }
                 else
                 {
-                    read.BaseStream.Position = 0x14 + Form1.unknownSize + Form1.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x21);
+                    read.BaseStream.Position = 0x14 + FormMain.unknownSize + FormMain.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x21);
                 }
                 textBox6.Text = Convert.ToString(read.ReadInt16());
-                if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                 {
-                    read.BaseStream.Position = 0x10 + Form1.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x25);
+                    read.BaseStream.Position = 0x10 + FormMain.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x25);
                 }
                 else
                 {
-                    read.BaseStream.Position = 0x14 + Form1.unknownSize + Form1.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x25);
+                    read.BaseStream.Position = 0x14 + FormMain.unknownSize + FormMain.permissionSize + (0x0 + 0x30 * listBox1.SelectedIndex + 0x25);
                 }
                 textBox5.Text = Convert.ToString(read.ReadInt16());
                 read.Close();
@@ -245,12 +245,12 @@ namespace Map_Converter
 
         private void button3_Click(object sender, EventArgs e) // Save
         {
-            if (Form1.isBW || Form1.isB2W2)
+            if (FormMain.isBW || FormMain.isB2W2)
             {
-                System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4")));
-                File.Create(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4") + "_new").Close();
-                System.IO.BinaryWriter writeMap = new System.IO.BinaryWriter(File.OpenWrite(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4") + "_new"));
-                for (int i = 0; i < Form1.vbldOffset + 0x4 + (0x10 * listBox1.SelectedIndex); i++)
+                System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4")));
+                File.Create(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4") + "_new").Close();
+                System.IO.BinaryWriter writeMap = new System.IO.BinaryWriter(File.OpenWrite(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4") + "_new"));
+                for (int i = 0; i < FormMain.vbldOffset + 0x4 + (0x10 * listBox1.SelectedIndex); i++)
                 {
                     writeMap.Write(readMap.ReadByte()); // Reads unmodified bytes and writes them to the main file
                 }
@@ -264,7 +264,7 @@ namespace Map_Converter
                 writeMap.Write((byte)numericUpDown5.Value);
                 writeMap.Write((byte)((int)numericUpDown1.Value >> 8));
                 writeMap.Write((byte)((int)numericUpDown1.Value & 0xFF));
-                readMap.BaseStream.Position = Form1.vbldOffset + 0x4 + (0x10 * listBox1.SelectedIndex) + 0x10;
+                readMap.BaseStream.Position = FormMain.vbldOffset + 0x4 + (0x10 * listBox1.SelectedIndex) + 0x10;
                 for (int i = 0; i < 0x10 * (amount - (listBox1.SelectedIndex + 1)); i++)
                 {
                     writeMap.Write(readMap.ReadByte()); // Reads unmodified bytes and writes them to the main file
@@ -272,27 +272,27 @@ namespace Map_Converter
                 readMap.Close();
                 writeMap.Close();
 
-                File.Delete(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4"));
-                File.Move(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4") + "_new", Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4"));
+                File.Delete(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4"));
+                File.Move(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4") + "_new", FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4"));
                 listBox1_SelectedIndexChanged(null, null);
             }
             else
             {
-                System.IO.BinaryReader size = new System.IO.BinaryReader(File.OpenRead(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4")));
-                File.Create(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4") + "_new").Close();
-                System.IO.BinaryWriter write = new System.IO.BinaryWriter(File.OpenWrite(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4") + "_new"));
+                System.IO.BinaryReader size = new System.IO.BinaryReader(File.OpenRead(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4")));
+                File.Create(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4") + "_new").Close();
+                System.IO.BinaryWriter write = new System.IO.BinaryWriter(File.OpenWrite(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4") + "_new"));
                 write.BaseStream.Position = 0x0;
                 size.BaseStream.Position = 0x0;
-                if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                 {
-                    for (int i = 0; i < (0x10 + Form1.permissionSize + (0x30 * listBox1.SelectedIndex)); i++)
+                    for (int i = 0; i < (0x10 + FormMain.permissionSize + (0x30 * listBox1.SelectedIndex)); i++)
                     {
                         write.Write(size.ReadByte()); // Reads unmodified bytes and writes them to the main file
                     }
                 }
                 else
                 {
-                    for (int i = 0; i < (0x14 + Form1.unknownSize + Form1.permissionSize + (0x30 * listBox1.SelectedIndex)); i++)
+                    for (int i = 0; i < (0x14 + FormMain.unknownSize + FormMain.permissionSize + (0x30 * listBox1.SelectedIndex)); i++)
                     {
                         write.Write(size.ReadByte()); // Reads unmodified bytes and writes them to the main file
                     }
@@ -311,37 +311,37 @@ namespace Map_Converter
                 for (int i = 0; i < 2; i++) write.Write((Byte)0x0); // Writes junk bytes
                 write.Write(Convert.ToUInt16(textBox5.Text)); // Writes Length
                 for (int i = 0; i < 9; i++) write.Write((Byte)0x0); // Writes junk bytes
-                if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                 {
-                    size.BaseStream.Position = 0x10 + Form1.permissionSize + (0x30 * listBox1.SelectedIndex) + 0x30;
+                    size.BaseStream.Position = 0x10 + FormMain.permissionSize + (0x30 * listBox1.SelectedIndex) + 0x30;
                 }
                 else
                 {
-                    size.BaseStream.Position = 0x14 + Form1.unknownSize + Form1.permissionSize + (0x30 * listBox1.SelectedIndex) + 0x30;
+                    size.BaseStream.Position = 0x14 + FormMain.unknownSize + FormMain.permissionSize + (0x30 * listBox1.SelectedIndex) + 0x30;
                 }
-                for (int i = 0; i < (0x30 * ((Form1.buildingsSize / 0x30) - (listBox1.SelectedIndex + 1)) + Form1.modelSize + Form1.terrainSize); i++)
+                for (int i = 0; i < (0x30 * ((FormMain.buildingsSize / 0x30) - (listBox1.SelectedIndex + 1)) + FormMain.modelSize + FormMain.terrainSize); i++)
                 {
                     write.Write(size.ReadByte()); // Reads unmodified bytes and writes them to the main file
                 }
                 size.Close();
                 write.Close();
 
-                File.Delete(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4"));
-                File.Move(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4") + "_new", Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4"));
+                File.Delete(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4"));
+                File.Move(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4") + "_new", FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4"));
                 listBox1_SelectedIndexChanged(null, null);
             }
         }
 
         private void button1_Click(object sender, EventArgs e) // Add
         {
-            if (Form1.isBW || Form1.isB2W2)
+            if (FormMain.isBW || FormMain.isB2W2)
             {
                 amount++;
                 listBox1.Items.Add(rm.GetString("building") + amount); // Adds building to listbox
-                System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4")));
-                File.Create(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4") + "_new").Close();
-                System.IO.BinaryWriter writeMap = new System.IO.BinaryWriter(File.OpenWrite(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4") + "_new"));
-                for (int i = 0; i < Form1.vbldOffset; i++)
+                System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4")));
+                File.Create(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4") + "_new").Close();
+                System.IO.BinaryWriter writeMap = new System.IO.BinaryWriter(File.OpenWrite(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4") + "_new"));
+                for (int i = 0; i < FormMain.vbldOffset; i++)
                 {
                     writeMap.Write(readMap.ReadByte()); // Reads unmodified bytes and writes them to the main file
                 }
@@ -355,40 +355,40 @@ namespace Map_Converter
                 {
                     writeMap.Write((byte)0); // Writes new building
                 }
-                writeMap.BaseStream.Position = Form1.voffsetPos;
-                Form1.vendOffset = Form1.vbldOffset + 0x4 + (0x10 * amount);
-                writeMap.Write(Form1.vendOffset);
+                writeMap.BaseStream.Position = FormMain.voffsetPos;
+                FormMain.vendOffset = FormMain.vbldOffset + 0x4 + (0x10 * amount);
+                writeMap.Write(FormMain.vendOffset);
                 readMap.Close();
                 writeMap.Close();
 
-                File.Delete(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4"));
-                File.Move(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4") + "_new", Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4"));
+                File.Delete(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4"));
+                File.Move(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4") + "_new", FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4"));
             }
             else
             {
                 counter = 1;
                 listBox1.Items.Clear();
-                for (int i = 0; i < (Form1.buildingsSize / 0x30 + 1); i++) // Index recheck
+                for (int i = 0; i < (FormMain.buildingsSize / 0x30 + 1); i++) // Index recheck
                 {
                     listBox1.Items.Add(rm.GetString("building") + counter); // Adds building to listbox
                     counter = counter + 1; // Increases index number
                 }
 
-                System.IO.BinaryReader size = new System.IO.BinaryReader(File.OpenRead(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4")));
-                File.Create(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4") + "_new").Close();
-                System.IO.BinaryWriter write = new System.IO.BinaryWriter(File.OpenWrite(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4") + "_new"));
+                System.IO.BinaryReader size = new System.IO.BinaryReader(File.OpenRead(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4")));
+                File.Create(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4") + "_new").Close();
+                System.IO.BinaryWriter write = new System.IO.BinaryWriter(File.OpenWrite(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4") + "_new"));
                 write.BaseStream.Position = 0x0;
                 size.BaseStream.Position = 0x0;
-                if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                 {
-                    for (int i = 0; i < (0x10 + Form1.permissionSize + Form1.buildingsSize); i++)
+                    for (int i = 0; i < (0x10 + FormMain.permissionSize + FormMain.buildingsSize); i++)
                     {
                         write.Write(size.ReadByte()); // Reads unmodified bytes and writes them to the main file
                     }
                 }
                 else
                 {
-                    for (int i = 0; i < (0x14 + Form1.unknownSize + Form1.permissionSize + Form1.buildingsSize); i++)
+                    for (int i = 0; i < (0x14 + FormMain.unknownSize + FormMain.permissionSize + FormMain.buildingsSize); i++)
                     {
                         write.Write(size.ReadByte()); // Reads unmodified bytes and writes them to the main file
                     }
@@ -407,30 +407,30 @@ namespace Map_Converter
                 for (int i = 0; i < 2; i++) write.Write((Byte)0x0); // Writes junk bytes
                 write.Write(Convert.ToUInt16(0x10)); // Writes Length
                 for (int i = 0; i < 9; i++) write.Write((Byte)0x0); // Writes junk bytes
-                for (int i = 0; i < (Form1.modelSize + Form1.terrainSize); i++)
+                for (int i = 0; i < (FormMain.modelSize + FormMain.terrainSize); i++)
                 {
                     write.Write(size.ReadByte()); // Reads unmodified bytes and writes them to the main file
                 }
-                Form1.buildingsSize = (Form1.buildingsSize + 0x30);
+                FormMain.buildingsSize = (FormMain.buildingsSize + 0x30);
                 write.BaseStream.Position = 0x4;
-                write.Write((int)Form1.buildingsSize); // Writes new section size to header
+                write.Write((int)FormMain.buildingsSize); // Writes new section size to header
                 size.Close();
                 write.Close();
 
-                File.Delete(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4"));
-                File.Move(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4") + "_new", Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4"));
+                File.Delete(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4"));
+                File.Move(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4") + "_new", FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4"));
             }
         }
 
         private void button2_Click(object sender, EventArgs e) // Remove
         {
-            if (Form1.isBW || Form1.isB2W2)
+            if (FormMain.isBW || FormMain.isB2W2)
             {
                 amount--;
-                System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4")));
-                File.Create(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4") + "_new").Close();
-                System.IO.BinaryWriter writeMap = new System.IO.BinaryWriter(File.OpenWrite(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4") + "_new"));
-                for (int i = 0; i < Form1.vbldOffset; i++)
+                System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4")));
+                File.Create(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4") + "_new").Close();
+                System.IO.BinaryWriter writeMap = new System.IO.BinaryWriter(File.OpenWrite(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4") + "_new"));
+                for (int i = 0; i < FormMain.vbldOffset; i++)
                 {
                     writeMap.Write(readMap.ReadByte()); // Reads unmodified bytes and writes them to the main file
                 }
@@ -445,14 +445,14 @@ namespace Map_Converter
                 {
                     writeMap.Write(readMap.ReadByte()); // Reads unmodified bytes and writes them to the main file
                 }
-                writeMap.BaseStream.Position = Form1.voffsetPos;
-                Form1.vendOffset = Form1.vbldOffset + 0x4 + (0x10 * amount);
-                writeMap.Write(Form1.vendOffset);
+                writeMap.BaseStream.Position = FormMain.voffsetPos;
+                FormMain.vendOffset = FormMain.vbldOffset + 0x4 + (0x10 * amount);
+                writeMap.Write(FormMain.vendOffset);
                 readMap.Close();
                 writeMap.Close();
 
-                File.Delete(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4"));
-                File.Move(Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4") + "_new", Form1.workingFolder + @"data\a\0\0\maps" + "\\" + Form1.mapIndex.ToString("D4"));
+                File.Delete(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4"));
+                File.Move(FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4") + "_new", FormMain.workingFolder + @"data\a\0\0\maps" + "\\" + FormMain.mapIndex.ToString("D4"));
                 counter = 1;
                 listBox1.Items.Clear();
                 for (int i = 0; i < amount; i++) // Index recheck
@@ -468,41 +468,41 @@ namespace Map_Converter
             }
             else
             {
-                System.IO.BinaryReader size = new System.IO.BinaryReader(File.OpenRead(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4")));
-                System.IO.FileStream newfile = File.Create(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4") + "_new");
+                System.IO.BinaryReader size = new System.IO.BinaryReader(File.OpenRead(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4")));
+                System.IO.FileStream newfile = File.Create(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4") + "_new");
                 newfile.Close();
-                System.IO.BinaryWriter write = new System.IO.BinaryWriter(File.OpenWrite(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4") + "_new"));
+                System.IO.BinaryWriter write = new System.IO.BinaryWriter(File.OpenWrite(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4") + "_new"));
                 write.BaseStream.Position = 0x0;
                 size.BaseStream.Position = 0x0;
-                if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                 {
-                    for (int i = 0; i < (0x10 + Form1.permissionSize + 0x30 * listBox1.SelectedIndex); i++)
+                    for (int i = 0; i < (0x10 + FormMain.permissionSize + 0x30 * listBox1.SelectedIndex); i++)
                     {
                         write.Write(size.ReadByte()); // Reads unmodified bytes and writes them to the main file
                     }
                 }
                 else
                 {
-                    for (int i = 0; i < (0x14 + Form1.unknownSize + Form1.permissionSize + 0x30 * listBox1.SelectedIndex); i++)
+                    for (int i = 0; i < (0x14 + FormMain.unknownSize + FormMain.permissionSize + 0x30 * listBox1.SelectedIndex); i++)
                     {
                         write.Write(size.ReadByte()); // Reads unmodified bytes and writes them to the main file
                     }
                 }
-                if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+                if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
                 {
-                    size.BaseStream.Position = 0x10 + Form1.permissionSize + 0x30 * (listBox1.SelectedIndex + 1);
+                    size.BaseStream.Position = 0x10 + FormMain.permissionSize + 0x30 * (listBox1.SelectedIndex + 1);
                 }
                 else
                 {
-                    size.BaseStream.Position = 0x14 + Form1.unknownSize + Form1.permissionSize + 0x30 * (listBox1.SelectedIndex + 1);
+                    size.BaseStream.Position = 0x14 + FormMain.unknownSize + FormMain.permissionSize + 0x30 * (listBox1.SelectedIndex + 1);
                 }
-                for (int i = 0; i < (Form1.modelSize + Form1.terrainSize + 0x30 * ((listBox1.Items.Count - 1) - listBox1.SelectedIndex)); i++)
+                for (int i = 0; i < (FormMain.modelSize + FormMain.terrainSize + 0x30 * ((listBox1.Items.Count - 1) - listBox1.SelectedIndex)); i++)
                 {
                     write.Write(size.ReadByte()); // Reads unmodified bytes and writes them to the main file
                 }
                 counter = 1;
                 listBox1.Items.Clear();
-                for (int i = 0; i < (Form1.buildingsSize / 0x30 - 1); i++) // Index recheck
+                for (int i = 0; i < (FormMain.buildingsSize / 0x30 - 1); i++) // Index recheck
                 {
                     listBox1.Items.Add(rm.GetString("building") + counter); // Adds building to listbox
                     counter = counter + 1; // Increases index number
@@ -513,20 +513,20 @@ namespace Map_Converter
                 }
                 button3.Enabled = false;
                 write.BaseStream.Position = 0x4;
-                write.Write((int)Form1.buildingsSize - 0x30); // Writes new section size to header
-                Form1.buildingsSize = Form1.buildingsSize - 0x30;
+                write.Write((int)FormMain.buildingsSize - 0x30); // Writes new section size to header
+                FormMain.buildingsSize = FormMain.buildingsSize - 0x30;
                 size.Close();
                 write.Close();
                 {
-                    File.Delete(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4"));
-                    File.Move(Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4") + "_new", Form1.mapFileName + "\\" + Form1.mapIndex.ToString("D4"));
+                    File.Delete(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4"));
+                    File.Move(FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4") + "_new", FormMain.mapFileName + "\\" + FormMain.mapIndex.ToString("D4"));
                 }
             }
         }
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
-            if (Form1.isBW || Form1.isB2W2)
+            if (FormMain.isBW || FormMain.isB2W2)
             {
                 if (gridMode == 0 && (numericUpDown2.Value > -18 && numericUpDown2.Value < 17) && (numericUpDown4.Value > -18 && numericUpDown4.Value < 17))
                 {
@@ -546,7 +546,7 @@ namespace Map_Converter
         {
             gridMode = 1;
             numericUpDown2.Value = dataGridView1.CurrentCellAddress.X - 17;
-            if (Form1.isBW || Form1.isB2W2)
+            if (FormMain.isBW || FormMain.isB2W2)
             {
                 numericUpDown4.Value = (Int16)((dataGridView1.CurrentCellAddress.Y - 17) ^ 0xFFFF);
             }
@@ -559,7 +559,7 @@ namespace Map_Converter
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Form1.isBW || Form1.isB2W2)
+            if (FormMain.isBW || FormMain.isB2W2)
             {
                 Form6_2_Building_List f6 = (Form6_2_Building_List)Application.OpenForms["Form6_2_Building_List"];
                 f6.CloseForm();

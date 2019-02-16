@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
 
         private void Form7_Load(object sender, EventArgs e)
         {
-            System.IO.BinaryReader readMatrix = new System.IO.BinaryReader(File.OpenRead(Form1.matrixEditorPath));
+            System.IO.BinaryReader readMatrix = new System.IO.BinaryReader(File.OpenRead(FormMain.matrixEditorPath));
             matrixWidth = readMatrix.ReadByte();
             matrixHeight = readMatrix.ReadByte();
             progressBar1.Maximum = matrixHeight * matrixHeight;

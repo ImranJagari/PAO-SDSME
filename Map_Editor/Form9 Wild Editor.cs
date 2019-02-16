@@ -30,57 +30,57 @@ namespace WindowsFormsApplication1
 
         private void Form9_Load(object sender, EventArgs e)
         {
-            if (Form1.isBW || Form1.isB2W2)
+            if (FormMain.isBW || FormMain.isB2W2)
             {
                 loadGenV();
                 return;
             }
             #region Read Pokémon Names
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041)
             {
-                textPath = Form1.workingFolder + @"data\msgdata\msg\0362";
+                textPath = FormMain.workingFolder + @"data\msgdata\msg\0362";
                 tabControl1.TabPages.Remove(tabPage3);
                 tabControl1.TabPages.Remove(tabPage4);
                 tabControl1.TabPages.Remove(tabPage5);
             }
-            if (Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041)
+            if (FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041)
             {
-                textPath = Form1.workingFolder + @"data\msgdata\msg\0356";
+                textPath = FormMain.workingFolder + @"data\msgdata\msg\0356";
                 tabControl1.TabPages.Remove(tabPage3);
                 tabControl1.TabPages.Remove(tabPage4);
                 tabControl1.TabPages.Remove(tabPage5);
             }
-            if (Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041)
             {
-                textPath = Form1.workingFolder + @"data\msgdata\msg\0357";
+                textPath = FormMain.workingFolder + @"data\msgdata\msg\0357";
                 tabControl1.TabPages.Remove(tabPage3);
                 tabControl1.TabPages.Remove(tabPage4);
                 tabControl1.TabPages.Remove(tabPage5);
             }
-            if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043)
+            if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043)
             {
-                textPath = Form1.workingFolder + @"data\msgdata\pl_msg\0412";
+                textPath = FormMain.workingFolder + @"data\msgdata\pl_msg\0412";
                 tabControl1.TabPages.Remove(tabPage3);
                 tabControl1.TabPages.Remove(tabPage4);
                 tabControl1.TabPages.Remove(tabPage5);
             }
-            if (Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
-                textPath = Form1.workingFolder + @"data\msgdata\pl_msg\0408";
+                textPath = FormMain.workingFolder + @"data\msgdata\pl_msg\0408";
                 tabControl1.TabPages.Remove(tabPage3);
                 tabControl1.TabPages.Remove(tabPage4);
                 tabControl1.TabPages.Remove(tabPage5);
             }
-            if (Form1.gameID == 0x454B5049 || Form1.gameID == 0x45475049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x44475049)
+            if (FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x45475049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x44475049)
             {
-                textPath = Form1.workingFolder + @"data\a\0\2\text\0237";
+                textPath = FormMain.workingFolder + @"data\a\0\2\text\0237";
                 tabControl1.TabPages.Remove(tabPage1);
                 tabControl1.TabPages.Remove(tabPage4);
                 tabControl1.TabPages.Remove(tabPage5);
             }
-            if (Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B4B5049 || Form1.gameID == 0x4B475049)
+            if (FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B4B5049 || FormMain.gameID == 0x4B475049)
             {
-                textPath = Form1.workingFolder + @"data\a\0\2\text\0232";
+                textPath = FormMain.workingFolder + @"data\a\0\2\text\0232";
                 tabControl1.TabPages.Remove(tabPage1);
                 tabControl1.TabPages.Remove(tabPage4);
                 tabControl1.TabPages.Remove(tabPage5);
@@ -270,41 +270,41 @@ namespace WindowsFormsApplication1
             radioButton2.Visible = false;
             radioButton3.Visible = false;
             radioButton4.Visible = false;
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x53414441 || Form1.gameID == 0x46414441 || Form1.gameID == 0x49414441 || Form1.gameID == 0x44414441 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4B414441)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4B414441)
             {
                 game = "dppt";
-                wildPath = Form1.workingFolder + @"data\fielddata\encountdata\d_enc_data";
-                NarcAPI.Narc.Open(Form1.workingFolder + @"data\fielddata\encountdata\d_enc_data.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\encountdata\d_enc_data");
+                wildPath = FormMain.workingFolder + @"data\fielddata\encountdata\d_enc_data";
+                NarcAPI.Narc.Open(FormMain.workingFolder + @"data\fielddata\encountdata\d_enc_data.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\encountdata\d_enc_data");
             }
-            if (Form1.gameID == 0x45415041 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44415041 ||  Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44415041 ||  FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B415041)
             {
                 game = "dppt";
-                wildPath = Form1.workingFolder + @"data\fielddata\encountdata\p_enc_data";
-                NarcAPI.Narc.Open(Form1.workingFolder + @"data\fielddata\encountdata\p_enc_data.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\encountdata\p_enc_data");
+                wildPath = FormMain.workingFolder + @"data\fielddata\encountdata\p_enc_data";
+                NarcAPI.Narc.Open(FormMain.workingFolder + @"data\fielddata\encountdata\p_enc_data.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\encountdata\p_enc_data");
             }
-            if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
                 game = "dppt";
-                wildPath = Form1.workingFolder + @"data\fielddata\encountdata\pl_enc_data";
-                NarcAPI.Narc.Open(Form1.workingFolder + @"data\fielddata\encountdata\pl_enc_data.narc").ExtractToFolder(Form1.workingFolder + @"data\fielddata\encountdata\pl_enc_data");
+                wildPath = FormMain.workingFolder + @"data\fielddata\encountdata\pl_enc_data";
+                NarcAPI.Narc.Open(FormMain.workingFolder + @"data\fielddata\encountdata\pl_enc_data.narc").ExtractToFolder(FormMain.workingFolder + @"data\fielddata\encountdata\pl_enc_data");
             }
-            if (Form1.gameID == 0x454B5049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4B4B5049)
+            if (FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4B4B5049)
             {
                 game = "hgss";
-                wildPath = Form1.workingFolder + @"data\a\0\3\wild";
-                NarcAPI.Narc.Open(Form1.workingFolder + @"data\a\0\3\7").ExtractToFolder(Form1.workingFolder + @"data\a\0\3\wild");
+                wildPath = FormMain.workingFolder + @"data\a\0\3\wild";
+                NarcAPI.Narc.Open(FormMain.workingFolder + @"data\a\0\3\7").ExtractToFolder(FormMain.workingFolder + @"data\a\0\3\wild");
             }
-            if (Form1.gameID == 0x45475049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B475049)
+            if (FormMain.gameID == 0x45475049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B475049)
             {
                 game = "hgss";
-                wildPath = Form1.workingFolder + @"data\a\1\3\wild";
-                NarcAPI.Narc.Open(Form1.workingFolder + @"data\a\1\3\6").ExtractToFolder(Form1.workingFolder + @"data\a\1\3\wild");
+                wildPath = FormMain.workingFolder + @"data\a\1\3\wild";
+                NarcAPI.Narc.Open(FormMain.workingFolder + @"data\a\1\3\6").ExtractToFolder(FormMain.workingFolder + @"data\a\1\3\wild");
             }
             for (int i = 0; i < Directory.GetFiles(wildPath).Length; i++)
             {
                 comboBox1.Items.Add(rm.GetString("wildPokemon") + i);
             }
-            comboBox1.SelectedIndex = Form1.wildIndex;
+            comboBox1.SelectedIndex = FormMain.wildIndex;
         }
 
         private void loadGenV()
@@ -312,13 +312,13 @@ namespace WindowsFormsApplication1
             tabControl1.TabPages.Remove(tabPage1);
             tabControl1.TabPages.Remove(tabPage2);
             tabControl1.TabPages.Remove(tabPage3);
-            if (Form1.isBW) NarcAPI.Narc.Open(Form1.workingFolder + @"data\a\1\2\6").ExtractToFolder(Form1.workingFolder + @"data\a\1\2\wild");
-            else NarcAPI.Narc.Open(Form1.workingFolder + @"data\a\1\2\7").ExtractToFolder(Form1.workingFolder + @"data\a\1\2\wild");
+            if (FormMain.isBW) NarcAPI.Narc.Open(FormMain.workingFolder + @"data\a\1\2\6").ExtractToFolder(FormMain.workingFolder + @"data\a\1\2\wild");
+            else NarcAPI.Narc.Open(FormMain.workingFolder + @"data\a\1\2\7").ExtractToFolder(FormMain.workingFolder + @"data\a\1\2\wild");
             List<string> names = new List<string>();
             #region Pokémon Names
             string path;
             int mainKey = 31881;
-            if (Form1.isBW)
+            if (FormMain.isBW)
             {
                 path = "0070";
             }
@@ -326,7 +326,7 @@ namespace WindowsFormsApplication1
             {
                 path = "0090";
             }
-            System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\0\0\texts\" + path));
+            System.IO.BinaryReader readText = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\0\0\texts\" + path));
             int nameSections = readText.ReadUInt16();
             uint[] sectionOffset = new uint[3];
             uint[] sectionSize = new uint[3];
@@ -455,11 +455,11 @@ namespace WindowsFormsApplication1
                 comboBox155.Items.Add(names[i]);
             }
             #endregion
-            for (int i = 0; i < Directory.GetFiles(Form1.workingFolder + @"data\a\1\2\wild").Length; i++)
+            for (int i = 0; i < Directory.GetFiles(FormMain.workingFolder + @"data\a\1\2\wild").Length; i++)
             {
                 comboBox1.Items.Add(rm.GetString("wildPokemon") + i);
             }
-            comboBox1.SelectedIndex = Form1.wildIndex;
+            comboBox1.SelectedIndex = FormMain.wildIndex;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -468,11 +468,11 @@ namespace WindowsFormsApplication1
             {
                 button1.Enabled = true;
                 #region Gen V
-                if (Form1.isBW || Form1.isB2W2)
+                if (FormMain.isBW || FormMain.isB2W2)
                 {
                     editON = false;
                     int pokemon1;
-                    System.IO.BinaryReader readWild = new System.IO.BinaryReader(File.OpenRead(Form1.workingFolder + @"data\a\1\2\wild" + "\\" + comboBox1.SelectedIndex.ToString("D4")));
+                    System.IO.BinaryReader readWild = new System.IO.BinaryReader(File.OpenRead(FormMain.workingFolder + @"data\a\1\2\wild" + "\\" + comboBox1.SelectedIndex.ToString("D4")));
                     if (readWild.BaseStream.Length == 0xE8)
                     {
                         checkBox1.Checked = false;
@@ -1082,9 +1082,9 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e) // Writes Wild Pokémon
         {
             #region Gen V
-            if (Form1.isBW || Form1.isB2W2)
+            if (FormMain.isBW || FormMain.isB2W2)
             {
-                System.IO.BinaryWriter writeWild = new System.IO.BinaryWriter(File.OpenWrite(Form1.workingFolder + @"data\a\1\2\wild" + "\\" + comboBox1.SelectedIndex.ToString("D4")));
+                System.IO.BinaryWriter writeWild = new System.IO.BinaryWriter(File.OpenWrite(FormMain.workingFolder + @"data\a\1\2\wild" + "\\" + comboBox1.SelectedIndex.ToString("D4")));
                 if (checkBox1.Checked)
                 {
                     if (radioButton2.Checked) writeWild.BaseStream.Position = 0xE8;
@@ -1569,40 +1569,40 @@ namespace WindowsFormsApplication1
 
         private void Form9_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Form1.isBW)
+            if (FormMain.isBW)
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\a\1\2\wild").Save(Form1.workingFolder + @"data\a\1\2\6");
-                Directory.Delete(Form1.workingFolder + @"data\a\1\2\wild", true);
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\a\1\2\wild").Save(FormMain.workingFolder + @"data\a\1\2\6");
+                Directory.Delete(FormMain.workingFolder + @"data\a\1\2\wild", true);
             }
-            if (Form1.isB2W2)
+            if (FormMain.isB2W2)
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\a\1\2\wild").Save(Form1.workingFolder + @"data\a\1\2\7");
-                Directory.Delete(Form1.workingFolder + @"data\a\1\2\wild", true);
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\a\1\2\wild").Save(FormMain.workingFolder + @"data\a\1\2\7");
+                Directory.Delete(FormMain.workingFolder + @"data\a\1\2\wild", true);
             }
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x53414441 || Form1.gameID == 0x46414441 || Form1.gameID == 0x49414441 || Form1.gameID == 0x44414441 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4B414441)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4B414441)
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\fielddata\encountdata\d_enc_data").Save(Form1.workingFolder + @"data\fielddata\encountdata\d_enc_data.narc");
-                Directory.Delete(Form1.workingFolder + @"data\fielddata\encountdata\d_enc_data", true);
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\fielddata\encountdata\d_enc_data").Save(FormMain.workingFolder + @"data\fielddata\encountdata\d_enc_data.narc");
+                Directory.Delete(FormMain.workingFolder + @"data\fielddata\encountdata\d_enc_data", true);
             }
-            if (Form1.gameID == 0x45415041 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B415041)
+            if (FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B415041)
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\fielddata\encountdata\p_enc_data").Save(Form1.workingFolder + @"data\fielddata\encountdata\p_enc_data.narc");
-                Directory.Delete(Form1.workingFolder + @"data\fielddata\encountdata\p_enc_data", true);
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\fielddata\encountdata\p_enc_data").Save(FormMain.workingFolder + @"data\fielddata\encountdata\p_enc_data.narc");
+                Directory.Delete(FormMain.workingFolder + @"data\fielddata\encountdata\p_enc_data", true);
             }
-            if (Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\fielddata\encountdata\pl_enc_data").Save(Form1.workingFolder + @"data\fielddata\encountdata\pl_enc_data.narc");
-                Directory.Delete(Form1.workingFolder + @"data\fielddata\encountdata\pl_enc_data", true);
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\fielddata\encountdata\pl_enc_data").Save(FormMain.workingFolder + @"data\fielddata\encountdata\pl_enc_data.narc");
+                Directory.Delete(FormMain.workingFolder + @"data\fielddata\encountdata\pl_enc_data", true);
             }
-            if (Form1.gameID == 0x454B5049 || Form1.gameID == 0x534B5049 || Form1.gameID == 0x464B5049 || Form1.gameID == 0x494B5049 || Form1.gameID == 0x444B5049 || Form1.gameID == 0x4A4B5049 || Form1.gameID == 0x4B4B5049)
+            if (FormMain.gameID == 0x454B5049 || FormMain.gameID == 0x534B5049 || FormMain.gameID == 0x464B5049 || FormMain.gameID == 0x494B5049 || FormMain.gameID == 0x444B5049 || FormMain.gameID == 0x4A4B5049 || FormMain.gameID == 0x4B4B5049)
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\a\0\3\wild").Save(Form1.workingFolder + @"data\a\0\3\7");
-                Directory.Delete(Form1.workingFolder + @"data\a\0\3\wild", true);
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\a\0\3\wild").Save(FormMain.workingFolder + @"data\a\0\3\7");
+                Directory.Delete(FormMain.workingFolder + @"data\a\0\3\wild", true);
             }
-            if (Form1.gameID == 0x45475049 || Form1.gameID == 0x53475049 || Form1.gameID == 0x46475049 || Form1.gameID == 0x49475049 || Form1.gameID == 0x44475049 || Form1.gameID == 0x4A475049 || Form1.gameID == 0x4B475049)
+            if (FormMain.gameID == 0x45475049 || FormMain.gameID == 0x53475049 || FormMain.gameID == 0x46475049 || FormMain.gameID == 0x49475049 || FormMain.gameID == 0x44475049 || FormMain.gameID == 0x4A475049 || FormMain.gameID == 0x4B475049)
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\a\1\3\wild").Save(Form1.workingFolder + @"data\a\1\3\6");
-                Directory.Delete(Form1.workingFolder + @"data\a\1\3\wild", true);
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\a\1\3\wild").Save(FormMain.workingFolder + @"data\a\1\3\6");
+                Directory.Delete(FormMain.workingFolder + @"data\a\1\3\wild", true);
             }
         }
 
@@ -1612,7 +1612,7 @@ namespace WindowsFormsApplication1
             {
                 if (editON)
                 {
-                    File.Create(Form1.workingFolder + @"data\a\1\2\wild" + "\\" + comboBox1.SelectedIndex.ToString("D4")).Close();
+                    File.Create(FormMain.workingFolder + @"data\a\1\2\wild" + "\\" + comboBox1.SelectedIndex.ToString("D4")).Close();
                     button1_Click(null, null);
                 }
                 radioButton1.Enabled = false;
@@ -1624,7 +1624,7 @@ namespace WindowsFormsApplication1
             {
                 if (editON)
                 {
-                    System.IO.BinaryWriter writeWild = new System.IO.BinaryWriter(File.Create(Form1.workingFolder + @"data\a\1\2\wild" + "\\" + comboBox1.SelectedIndex.ToString("D4")));
+                    System.IO.BinaryWriter writeWild = new System.IO.BinaryWriter(File.Create(FormMain.workingFolder + @"data\a\1\2\wild" + "\\" + comboBox1.SelectedIndex.ToString("D4")));
                     byte[] dummy = new byte[928];
                     writeWild.Write(dummy);
                     writeWild.Close();

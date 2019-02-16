@@ -48,16 +48,16 @@ namespace WindowsFormsApplication1
         {
             Form2 bldEditor = new Form2();
             bldEditor.Show(this);
-            if (Form1.gameID == 0x45414441 || Form1.gameID == 0x45415041 || Form1.gameID == 0x53414441 || Form1.gameID == 0x53415041 || Form1.gameID == 0x46414441 || Form1.gameID == 0x46415041 || Form1.gameID == 0x49414441 || Form1.gameID == 0x49415041 || Form1.gameID == 0x44414441 || Form1.gameID == 0x44415041 || Form1.gameID == 0x4A414441 || Form1.gameID == 0x4A415041 || Form1.gameID == 0x4B414441 || Form1.gameID == 0x4B415041 || Form1.gameID == 0x45555043 || Form1.gameID == 0x53555043 || Form1.gameID == 0x46555043 || Form1.gameID == 0x49555043 || Form1.gameID == 0x44555043 || Form1.gameID == 0x4A555043 || Form1.gameID == 0x4B555043)
+            if (FormMain.gameID == 0x45414441 || FormMain.gameID == 0x45415041 || FormMain.gameID == 0x53414441 || FormMain.gameID == 0x53415041 || FormMain.gameID == 0x46414441 || FormMain.gameID == 0x46415041 || FormMain.gameID == 0x49414441 || FormMain.gameID == 0x49415041 || FormMain.gameID == 0x44414441 || FormMain.gameID == 0x44415041 || FormMain.gameID == 0x4A414441 || FormMain.gameID == 0x4A415041 || FormMain.gameID == 0x4B414441 || FormMain.gameID == 0x4B415041 || FormMain.gameID == 0x45555043 || FormMain.gameID == 0x53555043 || FormMain.gameID == 0x46555043 || FormMain.gameID == 0x49555043 || FormMain.gameID == 0x44555043 || FormMain.gameID == 0x4A555043 || FormMain.gameID == 0x4B555043)
             {
-                bldPath = Form1.workingFolder + @"data\fielddata\build_model\build_model\";
-                editorTileset = Form1.workingFolder + @"data\fielddata\areadata\area_build_model\areabm_texset";
+                bldPath = FormMain.workingFolder + @"data\fielddata\build_model\build_model\";
+                editorTileset = FormMain.workingFolder + @"data\fielddata\areadata\area_build_model\areabm_texset";
             }
             else
             {
                 checkBox1.Enabled = true;
-                bldPath = Form1.workingFolder + @"data\a\0\4\building\";
-                editorTileset = Form1.workingFolder + @"data\a\0\7\textureBld";
+                bldPath = FormMain.workingFolder + @"data\a\0\4\building\";
+                editorTileset = FormMain.workingFolder + @"data\a\0\7\textureBld";
             }
             int bldCount = Directory.GetFiles(bldPath).Length;
             string bldName;
@@ -82,7 +82,7 @@ namespace WindowsFormsApplication1
             }
             comboBox1.Items.Clear();
             comboBox1.Items.Add(rm.GetString("internalTextures"));
-            for (int i = 0; i < Form1.bldTexturesCount; i++)
+            for (int i = 0; i < FormMain.bldTexturesCount; i++)
             {
                 comboBox1.Items.Add(rm.GetString("buildingPackList") + i);
             }
@@ -130,13 +130,13 @@ namespace WindowsFormsApplication1
             listBox1.Items.Clear();
             if (checkBox1.Checked == true)
             {
-                NarcAPI.Narc.Open(Form1.workingFolder + @"data\a\1\4\8").ExtractToFolder(Form1.workingFolder + @"data\a\1\4\building\");
-                bldPath = Form1.workingFolder + @"data\a\1\4\building\";
+                NarcAPI.Narc.Open(FormMain.workingFolder + @"data\a\1\4\8").ExtractToFolder(FormMain.workingFolder + @"data\a\1\4\building\");
+                bldPath = FormMain.workingFolder + @"data\a\1\4\building\";
             }
             else
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\a\1\4\building\").Save(Form1.workingFolder + @"data\a\1\4\8");
-                bldPath = Form1.workingFolder + @"data\a\0\4\building\";
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\a\1\4\building\").Save(FormMain.workingFolder + @"data\a\1\4\8");
+                bldPath = FormMain.workingFolder + @"data\a\0\4\building\";
             }
             int bldCount = Directory.GetFiles(bldPath).Length;
             string bldName;
@@ -164,10 +164,10 @@ namespace WindowsFormsApplication1
 
         private void Form6_Building_List_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Directory.Exists(Form1.workingFolder + @"data\a\1\4\building\"))
+            if (Directory.Exists(FormMain.workingFolder + @"data\a\1\4\building\"))
             {
-                NarcAPI.Narc.FromFolder(Form1.workingFolder + @"data\a\1\4\building\").Save(Form1.workingFolder + @"data\a\1\4\8");
-                Directory.Delete(Form1.workingFolder + @"data\a\1\4\building\", true);
+                NarcAPI.Narc.FromFolder(FormMain.workingFolder + @"data\a\1\4\building\").Save(FormMain.workingFolder + @"data\a\1\4\8");
+                Directory.Delete(FormMain.workingFolder + @"data\a\1\4\building\", true);
             }
         }
 

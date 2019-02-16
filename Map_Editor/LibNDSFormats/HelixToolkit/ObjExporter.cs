@@ -21,11 +21,13 @@
         private int vertexIndex;
         private readonly StreamWriter writer;
 
-        public ObjExporter(string outputFileName) : this(outputFileName, null)
+        private bool isSingleObj;
+
+        public ObjExporter(string outputFileName, bool isSingleObj) : this(outputFileName, null, isSingleObj)
         {
         }
 
-        public ObjExporter(string outputFileName, string comment)
+        public ObjExporter(string outputFileName, string comment, bool isSingleObj)
         {
             this.groupNo = 1;
             this.matNo = 1;
@@ -44,6 +46,7 @@
                 this.writer.WriteLine(string.Format("# {0}", comment));
             }
             this.writer.WriteLine("mtllib " + fileName);
+            this.isSingleObj = isSingleObj;
         }
 
         public override void Close()
@@ -83,9 +86,17 @@
                 if (brush == null)
                 {
                     string str = matName.Replace(":", "_") + ".png";
-                    str = (this.directory.Contains("buildings") ? "./../../../Materials/" : "./../Materials/") + str;
-                    string path = Path.Combine(this.directory, str.Remove(0,1));
-                    path = Path.Combine(this.directory + path);
+                    string path = "";
+                    if (!isSingleObj)
+                    {
+                        str = (this.directory.Contains("buildings") ? "./../../../Materials/" : "./../Materials/") + str;
+                        path = Path.Combine(this.directory, str.Remove(0, 1));
+                        path = Path.Combine(this.directory + path);
+                    }
+                    else
+                    {
+                        path = this.directory + "\\" + str;
+                    }
                     ImageBrush brush2 = (ImageBrush) material2.Brush;
                     Exporter.RenderBrush(path, material2.Brush, (int) brush2.ImageSource.Width, (int) brush2.ImageSource.Height);
                     this.mwriter.WriteLine(string.Format("map_Kd {0}", str));
