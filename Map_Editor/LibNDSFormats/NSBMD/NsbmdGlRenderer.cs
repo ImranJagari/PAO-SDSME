@@ -11,6 +11,8 @@ using System.Windows.Media.Media3D;
 using OpenTK;
 using HelixToolkit;
 using MKDS_Course_Editor.Export3DTools;
+using Assimp;
+using Vector3D = System.Windows.Media.Media3D.Vector3D;
 
 namespace LibNDSFormats.NSBMD
 {
@@ -3152,8 +3154,10 @@ namespace LibNDSFormats.NSBMD
                 list.Add(Process3DCommandRipper(polygon.PolyData, Model.Materials[polygon.MatId], polygon.JointID, true));
                 num3++;
             }
-            File.Create(file).Close();
-            HelixToolkit.ObjExporter exporter = new HelixToolkit.ObjExporter(file, "Created with Spiky's DS Map Editor " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(), isSingleObj);
+            FileStream fileStream = File.Create(file);
+            HelixToolkit.ObjExporter exporter = new HelixToolkit.ObjExporter(fileStream, "Created with Spiky's DS Map Editor " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(), isSingleObj);
+
+
             int index = 0;
             foreach (MKDS_Course_Editor.Export3DTools.Group group in list)
             {
@@ -3297,8 +3301,22 @@ namespace LibNDSFormats.NSBMD
                 exporter.Export(modeld);
                 index++;
             }
-            
+
             exporter.Close();
+
+            try
+            {
+                AssimpContext importer = new AssimpContext();
+
+                Scene sceneb = importer.ImportFile(fileStream.Name);
+                importer.ExportFile(sceneb, fileStream.Name.Replace(".obj", ".3ds"), "3ds");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            
             this.writevertex = false;
         }
         private MKDS_Course_Editor.Export3DTools.Group Process3DCommandRipper(byte[] polydata, NsbmdMaterial m, int jointID, bool color)

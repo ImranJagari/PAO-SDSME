@@ -7973,6 +7973,8 @@ namespace WindowsFormsApplication1
                 return;
             }
 
+            MessageBox.Show("Map extracted !");
+
         }
 
         private void exportNSBMD(object sender, EventArgs e) // Gen V Export NSBMD / OBJ
@@ -17030,7 +17032,6 @@ namespace WindowsFormsApplication1
 
         private void btnExtractMaps_Click(object sender, EventArgs e)
         {
-            AssimpContext importer = new AssimpContext();
             Directory.CreateDirectory($"./maps/Materials");
 
             string bldPath = FormMain.workingFolder + @"data\a\0\4\building\";
@@ -17126,15 +17127,6 @@ namespace WindowsFormsApplication1
                                     Directory.CreateDirectory($"./maps/{mapId} - {mapName}/buildings/{buildingId}");
                                     renderer.RipModel($"./maps/{mapId} - {mapName}/buildings/{buildingId}/{buildingId}.obj");
 
-                                    try
-                                    {
-                                        Scene sceneb = importer.ImportFile($"./maps/{mapId} - {mapName}/buildings/{buildingId}/{buildingId}.obj");
-                                        importer.ExportFile(sceneb, $"./maps/{mapId} - {mapName}/buildings/{buildingId}/{buildingId}.3ds", "3ds");
-                                    }
-                                    catch (Exception)
-                                    {
-
-                                    }
                                     read.ReadUInt16();
                                     short posX = read.ReadInt16(); // Reads X Coordinates
                                     read.ReadUInt16();
@@ -17147,7 +17139,7 @@ namespace WindowsFormsApplication1
                                 #endregion
 
                                 #region Movement permissions
-                                if (gameID == 0x45414441 || gameID == 0x45415041 || gameID == 0x53414441 || gameID == 0x53415041 || gameID == 0x46414441 || gameID == 0x46415041 || gameID == 0x49414441 || gameID == 0x49415041 || gameID == 0x44414441 || gameID == 0x44415041 || gameID == 0x4A414441 || gameID == 0x4A415041 || gameID == 0x4B414441 || gameID == 0x4B415041 || gameID == 0x45555043 || gameID == 0x53555043 || gameID == 0x46555043 || gameID == 0x49555043 || gameID == 0x44555043 || gameID == 0x4A555043 || gameID == 0x4B555043)
+                                    if (gameID == 0x45414441 || gameID == 0x45415041 || gameID == 0x53414441 || gameID == 0x53415041 || gameID == 0x46414441 || gameID == 0x46415041 || gameID == 0x49414441 || gameID == 0x49415041 || gameID == 0x44414441 || gameID == 0x44415041 || gameID == 0x4A414441 || gameID == 0x4A415041 || gameID == 0x4B414441 || gameID == 0x4B415041 || gameID == 0x45555043 || gameID == 0x53555043 || gameID == 0x46555043 || gameID == 0x49555043 || gameID == 0x44555043 || gameID == 0x4A555043 || gameID == 0x4B555043)
                                     {
                                         read.BaseStream.Position = 0x10;
                                     }
@@ -17193,15 +17185,6 @@ namespace WindowsFormsApplication1
                                 };
                                 rendererOBJ.RipModel($"./maps/{mapId} - {mapName}/{mapId} - {mapName}.obj");
 
-                                try
-                                {
-                                    Scene scene = importer.ImportFile($"./maps/{mapId} - {mapName}/{mapId} - {mapName}.obj");
-                                    bool success = importer.ExportFile(scene, $"./maps/{mapId} - {mapName}/{mapId} - {mapName}.3ds", "3ds");
-                                }
-                                catch (Exception exception)
-                                {
-                                    MessageBox.Show("There was a problem when exporting to 3DS. Operation aborted." + Environment.NewLine + " Message : " + exception.Message + Environment.NewLine + " Stacktrace : " + exception.StackTrace, null, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                                }
                             }
                         }
                     }
@@ -17284,16 +17267,6 @@ namespace WindowsFormsApplication1
                                     Directory.CreateDirectory($"./maps/{mapId} - {mapName}/buildings/{buildingId}");
                                     renderer.RipModel($"./maps/{mapId} - {mapName}/buildings/{buildingId}/{buildingId}.obj");
 
-                                    try
-                                    {
-                                        Scene sceneb = importer.ImportFile($"./maps/{mapId} - {mapName}/buildings/{buildingId}/{buildingId}.obj");
-                                        importer.ExportFile(sceneb, $"./maps/{mapId} - {mapName}/buildings/{buildingId}/{buildingId}.3ds", "3ds");
-                                    }
-                                    catch (Exception)
-                                    {
-
-                                    }
-
                                     read.ReadUInt16();
                                     short posX = read.ReadInt16(); // Reads X Coordinates
                                     read.ReadUInt16();
@@ -17349,16 +17322,6 @@ namespace WindowsFormsApplication1
                                     Model = _nsbmd.models[0]
                                 };
                                 rendererOBJ.RipModel($"./maps/{mapId} - {mapName}/{mapId} - {mapName}.obj");
-
-
-                                try
-                                {
-                                    Scene scene = importer.ImportFile($"./maps/{mapId} - {mapName}/{mapId} - {mapName}.obj");
-                                    bool success = importer.ExportFile(scene, $"./maps/{mapId} - {mapName}/{mapId} - {mapName}.3ds", "3ds");
-                                }
-                                catch (Exception)
-                                {
-                                }
 
                             }
                         }

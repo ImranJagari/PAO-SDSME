@@ -23,11 +23,11 @@
 
         private bool isSingleObj;
 
-        public ObjExporter(string outputFileName, bool isSingleObj) : this(outputFileName, null, isSingleObj)
+        public ObjExporter(FileStream outputFileName, bool isSingleObj) : this(outputFileName, null, isSingleObj)
         {
         }
 
-        public ObjExporter(string outputFileName, string comment, bool isSingleObj)
+        public ObjExporter(FileStream outputFileName, string comment, bool isSingleObj)
         {
             this.groupNo = 1;
             this.matNo = 1;
@@ -35,8 +35,8 @@
             this.objectNo = 1;
             this.textureIndex = 1;
             this.vertexIndex = 1;
-            string fullPath = Path.GetFullPath(outputFileName);
-            string path = Path.ChangeExtension(outputFileName, ".mtl");
+            string fullPath = Path.GetFullPath(outputFileName.Name);
+            string path = Path.ChangeExtension(outputFileName.Name, ".mtl");
             string fileName = Path.GetFileName(path);
             this.directory = Path.GetDirectoryName(fullPath);
             this.writer = new StreamWriter(outputFileName);
