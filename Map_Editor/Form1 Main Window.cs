@@ -7749,11 +7749,11 @@ namespace WindowsFormsApplication1
                         export.Write(info); //separator tile/permission
                         info = new UTF8Encoding(true).GetBytes(readMap.ReadByte().ToString());
                         export.Write(info); //permission id
+                        if (i == 31 && counter == 31)
+                            continue;
                         info = new UTF8Encoding(true).GetBytes("|");
                         export.Write(info); //separator between tiles
                     }
-                    if (i >= 31)
-                        export.Write('\n');
                 }
 
                 export.Close();
@@ -17377,6 +17377,39 @@ namespace WindowsFormsApplication1
                         );
                 }
             }
+        }
+
+        private void btnCpyClipBoard_Click(object sender, EventArgs e)
+        {
+            System.IO.BinaryReader readMap = new System.IO.BinaryReader(File.OpenRead(mapFileName + "\\" + cmbMapGen4.SelectedIndex.ToString("D4")));
+            if (gameID == 0x45414441 || gameID == 0x45415041 || gameID == 0x53414441 || gameID == 0x53415041 || gameID == 0x46414441 || gameID == 0x46415041 || gameID == 0x49414441 || gameID == 0x49415041 || gameID == 0x44414441 || gameID == 0x44415041 || gameID == 0x4A414441 || gameID == 0x4A415041 || gameID == 0x4B414441 || gameID == 0x4B415041 || gameID == 0x45555043 || gameID == 0x53555043 || gameID == 0x46555043 || gameID == 0x49555043 || gameID == 0x44555043 || gameID == 0x4A555043 || gameID == 0x4B555043)
+            {
+                readMap.BaseStream.Position = 0x10;
+            }
+            else
+            {
+                readMap.BaseStream.Position = 0x14 + unknownSize;
+            }
+            string data = "";
+            for (int i = 0; i < 32; i++)
+            {
+                for (int counter = 0; counter < 32; counter++)
+                {
+                    string info = readMap.ReadByte().ToString();
+                    data += info; //tile id
+                    info = ",";
+                    data += info; //separator tile/permission
+                    info = readMap.ReadByte().ToString();
+                    data += info; //permission id
+                    if (i == 31 && counter == 31)
+                        continue;
+                    info = "|";
+                    data += info; //separator between tiles
+                }
+            }
+            Clipboard.SetText(data);
+            MessageBox.Show("Data copied to clipboard : " + data);
+            readMap.Close();
         }
     }
 }

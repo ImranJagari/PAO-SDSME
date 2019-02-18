@@ -609,6 +609,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnExtractAllMaps = new System.Windows.Forms.Button();
             this.label69 = new System.Windows.Forms.Label();
+            this.btnCpyClipBoard = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -1597,6 +1598,7 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.btnCpyClipBoard);
             this.tabPage6.Controls.Add(this.groupBox1);
             this.tabPage6.Controls.Add(this.tabControl3);
             this.tabPage6.Controls.Add(this.button16);
@@ -5915,6 +5917,13 @@
             resources.ApplyResources(this.label69, "label69");
             this.label69.Name = "label69";
             // 
+            // btnCpyClipBoard
+            // 
+            resources.ApplyResources(this.btnCpyClipBoard, "btnCpyClipBoard");
+            this.btnCpyClipBoard.Name = "btnCpyClipBoard";
+            this.btnCpyClipBoard.UseVisualStyleBackColor = true;
+            this.btnCpyClipBoard.Click += new System.EventHandler(this.btnCpyClipBoard_Click);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -6608,6 +6617,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn97;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn98;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn99;
+        private System.Windows.Forms.Button btnCpyClipBoard;
     }
 }
 
